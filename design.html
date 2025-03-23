@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer>
+        function toggleMenu() {
+            var menu = document.getElementById("nav-menu");
+            menu.classList.toggle("active");
+        }
+
+        document.addEventListener("click", function(event) {
+            var menu = document.getElementById("nav-menu");
+            var hamburger = document.querySelector(".hamburger");
+            if (!hamburger.contains(event.target) && !menu.contains(event.target)) {
+                menu.classList.remove("active");
+            }
+        });
+    </script>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: radial-gradient(circle, #2c3e50, #3a506b, #5c677d);
+            color: #fff;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            background: rgba(0, 0, 0, 0.7);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+        }
+        .logo img {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+        }
+        .hamburger {
+            font-size: 30px;
+            cursor: pointer;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+            transition: background 0.3s;
+            z-index: 1100;
+        }
+        .hamburger:hover {
+            background: rgba(255, 255, 255, 0.4);
+        }
+        nav {
+            position: fixed;
+            top: 60px;
+            right: 0;
+            width: 250px;
+            background: rgba(0, 0, 0, 0.9);
+            text-align: left;
+            border-radius: 5px;
+            padding: 10px;
+            display: none;
+            transition: transform 0.3s ease-in-out;
+            transform: translateX(100%);
+            z-index: 1000;
+        }
+        nav.active {
+            display: block;
+            transform: translateX(0);
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        nav ul li {
+            padding: 10px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            display: block;
+            transition: color 0.3s ease;
+        }
+        nav ul li a:hover {
+            color: #95a5a6;
+        }
+        .content {
+            padding: 100px 20px 40px;
+            max-width: 800px;
+            margin: auto;
+            flex: 1;
+        }
+        .projects, .marketing-strategy, .case-studies, .gallery {
+            margin-top: 40px;
+        }
+        .project-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .project-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 5px;
+            width: 250px;
+        }
+        .project-item img {
+            width: 100%;
+            border-radius: 5px;
+        }
+        .cta-button {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 15px;
+            background: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .cta-button:hover {
+            background: #2980b9;
+        }
+        .gallery-grid {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        .gallery-grid img {
+            width: 200px;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        footer {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            text-align: center;
+            color: white;
+            margin-top: auto;
+        }
+        .footer-links a {
+            color: #95a5a6;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+           <a href= "homepage.html"><img src="logo.png" alt="Portfolio Logo"> </a>
+            Jacob's Portfolio
+        </div>
+        <div class="hamburger" onclick="toggleMenu()">
+            &#9776;
+        </div>
+        <nav id="nav-menu">
+            <ul>
+                <li><a href="homepage.html">Homepage</a></li>
+                <li><a href="information.html">Information</a></li>
+                <li><a href="marketing.html">Marketing</a></li>
+                <li><a href="communications.html">Communications</a></li>
+                <li><a href="design.html">Design</a></li>
+                <li><a href="contacts.html">Contacts</a></li>
+                <li><a href="aiusage.html">AI Usage</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="content">
+        <h1>Design and Production</h1>
+        <p>This page highlights my design experience, blending technical proficiency with creative problem-solving across multiple disciplines. From initial concept development to final execution, each project reflects a thoughtful approach to visual communication grounded in strong design principles. My work includes conceptual design, where ideas are shaped into clear visual strategies, and brand identity development, where logos and visual systems are crafted to convey meaning and consistency. I utilize Adobe InDesign to create clean, professional layouts with attention to hierarchy, typography, and structure. My video production skills cover editing, storyboarding, and post-production, while my Photoshop expertise allows for advanced image manipulation, compositing, and visual refinement. Together, these skills form a well-rounded portfolio rooted in both creativity and precision.</p>
+
+        <div class="projects">
+            <h2>Marketing Projects</h2>
+            <div class="project-grid">
+                <div class="project-item">
+                    <img src="Library/FallenAngel.jpg" alt="Project 1">
+                    <h3>Conceptualization Design</h3>
+                    <p>"Fallen Angel" is a conceptual Photoshop artwork that visually explores themes of loss, redemption, and isolation. With dramatic lighting and soft cloud effects, the piece focuses on a somber figure enveloped in darkness, symbolizing a poignant, yet powerful narrative. Advanced Photoshop techniques, such as compositing and atmospheric manipulation, were used to enhance the emotional depth of the scene, creating a visually immersive experience.</p>
+                    <a href="Library/FallenAngel.jpg" class="cta-button" target="_blank">View Project</a>
+                </div>
+                <div class="project-item">
+                    <img src="Library/GatorParkLogo.png" alt="Project 2">
+                    <h3>Logo and Brand Design</h3>
+                    <p>The Everglades Gator Park logo is a striking representation of the rugged, wild nature of the Florida Everglades. The iconic alligator silhouette is paired with bold typography to convey the thrill of wildlife encounters, while the circular design encapsulates the all-encompassing environment of the park. This design serves to communicate the exciting and adventurous spirit of the park, making it easily identifiable and dynamic.</p>
+                    <a href="Library/GatorParkLogo.png" class="cta-button" target="_blank">View Project</a>
+                </div>
+                <div class="project-item">
+                    <img src="Library/Poster.png" alt="Project 2">
+                    <h3>InDesign Usage and Creation</h3>
+                    <p>This digital poster captures a serene, stylized night landscape, where a winding path leads through lush, darkened hills under a glowing moon. The simplicity of the design and the clean vector elements bring a sense of calm and peace, while the bold contrast between the moon and surrounding stars draws the viewer’s eye. This project demonstrates the use of minimalist design techniques and digital illustration to create an engaging, peaceful scene.</p>
+                    <a href="Library/Poster.png" class="cta-button" target="_blank">View Project</a>
+                </div>
+                <div class="project-item">
+                    <img src="Library/GalacticEmpireCover.png" alt="Project 2">
+                    <h3>Video Production</h3>
+                    <p>This dynamic video edit pays homage to the iconic Galactic Empire, blending cinematic footage with motion graphics and sound design to evoke the grandeur and intensity of the Star Wars universe. Using Adobe Premiere Pro and After Effects, I layered dramatic music, visual effects, and stylized transitions to enhance the pacing and visual storytelling. This project showcases my ability to work with licensed media in a transformative, editorial context while applying key video production skills such as timing, audio syncing, and atmospheric enhancement. It also reflects my passion for science fiction storytelling and my attention to thematic detail.</p>
+                    <a href="Library/GalacticEmpireEdit.mp4" class="cta-button" target="_blank">View Project</a>
+                </div>
+                <div class="project-item">
+                    <img src="Library/Reach.jpg" alt="Project 2">
+                    <h3>Photoshop Work Proficiency</h3>
+                    <p>"Reach" is a striking black-and-white conceptual photography piece that portrays a hand reaching towards the light. The swirling cloud patterns and dramatic lighting create a sense of movement and aspiration. This image symbolizes the human desire for connection and transcendence, captured in a single, powerful gesture. The image showcases my ability to manipulate photography and light to evoke strong emotional responses and storytelling.</p>
+                    <a href="Library/Reach.jpg" class="cta-button" target="_blank">View Project</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Jacob's Portfolio. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="mailto:jfw001@lvc.edu">Email</a>
+            <a href="https://www.linkedin.com/in/jacob-winter-52a160263/">LinkedIn</a>
+            <a href="https://www.facebook.com/jacob.winter.33671">Facebook</a>
+        </div>
+    </footer>
+</body>
+</html>

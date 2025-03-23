@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Communications - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer>
+        function toggleMenu() {
+            var menu = document.getElementById("nav-menu");
+            menu.classList.toggle("active");
+        }
+
+        document.addEventListener("click", function(event) {
+            var menu = document.getElementById("nav-menu");
+            var hamburger = document.querySelector(".hamburger");
+            if (!hamburger.contains(event.target) && !menu.contains(event.target)) {
+                menu.classList.remove("active");
+            }
+        });
+    </script>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: radial-gradient(circle, #2c3e50, #3a506b, #5c677d);
+            color: #fff;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            background: rgba(0, 0, 0, 0.7);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+        }
+        .logo img {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+        }
+        .hamburger {
+            font-size: 30px;
+            cursor: pointer;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+            transition: background 0.3s;
+            z-index: 1100;
+        }
+        .hamburger:hover {
+            background: rgba(255, 255, 255, 0.4);
+        }
+        nav {
+            position: fixed;
+            top: 60px;
+            right: 0;
+            width: 250px;
+            background: rgba(0, 0, 0, 0.9);
+            text-align: left;
+            border-radius: 5px;
+            padding: 10px;
+            display: none;
+            transition: transform 0.3s ease-in-out;
+            transform: translateX(100%);
+            z-index: 1000;
+        }
+        nav.active {
+            display: block;
+            transform: translateX(0);
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        nav ul li {
+            padding: 10px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            display: block;
+            transition: color 0.3s ease;
+        }
+        nav ul li a:hover {
+            color: #95a5a6;
+        }
+        .content {
+            padding: 100px 20px 40px;
+            max-width: 800px;
+            margin: auto;
+            flex: 1;
+        }
+        .projects, .marketing-strategy, .gallery {
+            margin-top: 40px;
+        }
+        .project-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .project-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 5px;
+            width: 250px;
+        }
+        .project-item img {
+            width: 100%;
+            border-radius: 5px;
+        }
+        .cta-button {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 15px;
+            background: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .cta-button:hover {
+            background: #2980b9;
+        }
+        .gallery-grid {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        .gallery-grid img {
+            width: 200px;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        footer {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            text-align: center;
+            color: white;
+            margin-top: auto;
+        }
+        .footer-links a {
+            color: #95a5a6;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+           <a href= "homepage.html"><img src="logo.png" alt="Portfolio Logo"> </a>
+            Jacob's Portfolio
+        </div>
+        <div class="hamburger" onclick="toggleMenu()">
+            &#9776;
+        </div>
+        <nav id="nav-menu">
+            <ul>
+                <li><a href="homepage.html">Homepage</a></li>
+                <li><a href="information.html">Information</a></li>
+                <li><a href="marketing.html">Marketing</a></li>
+                <li><a href="communications.html">Communications</a></li>
+                <li><a href="design.html">Design</a></li>
+                <li><a href="contacts.html">Contacts</a></li>
+                <li><a href="aiusage.html">AI Usage</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="content">
+        <h1>Digital Communications</h1>
+        <p>This section showcases my multidisciplinary skills in digital media through a series of applied communication projects. From prototype creation and content development to basic website programming, each piece reflects my ability to blend strategy, creativity, and functionality. I’ve worked with tools like Figma to design user-focused prototypes, crafted written and visual content for diverse audiences, and built responsive web pages using HTML and CSS. Additionally, I’ve applied core principles of usability and design to enhance user experience and created data-driven infographics that simplify complex information into engaging visual narratives. Together, these projects demonstrate my well-rounded approach to effective and impactful digital communication.</p>
+
+                <div class="sub-information">
+
+            <h2>Key Learnings from Digital Communications</h2>
+            <ul>
+                <li>Using Figma taught me to focus on usability early in the design process. I learned how layout and flow impact user experience, shifting my approach from visual design to functional design.</li>
+                <li>Creating content helped me realize that strong messaging goes beyond writing—it requires understanding audience needs, platform strategy, and tone to drive real engagement.</li>
+                <li>HTML and CSS challenged me at first, but building pages from scratch helped me gain confidence in coding and reinforced the connection between structure, design, and user experience.</li>
+            </ul>
+        </div>
+
+        <div class="projects">
+            <h2>Digital Communication Projects</h2>
+            <div class="project-grid">
+                <div class="project-item">
+                    <img src="Library/PrototypingCover.png" alt="Project 1">
+                    <h3>Problem Solving and Prototype Creation</h3>
+                    <p>This project highlights my ability and my project workmates ability to identify communication challenges and develop strategic content solutions through iterative prototyping. From concept to execution, these projects showcase how I apply critical thinking, audience analysis, and design tools to create impactful, user-centered digital content.</p>
+                    <a href="Library/DCOM262BPBGroupPresentation.pdf" class="cta-button" target="_blank">View Project</a>
+                </div>
+                <div class="project-item">
+                    <img src="Library/MagazineCover.png" alt="Project 2">
+                    <h3>Content Creation</h3>
+                    <p>This project showcases my ability to develop cohesive editorial content, visual design, and layout for a full-length magazine. Through this process, I applied skills in storytelling, audience targeting, content planning, typography, and visual hierarchy—demonstrating a strong understanding of both written and visual communication within a publication format.</p>
+                    <a href="Library/MagazineConcept.pdf" class="cta-button" target="_blank">View Project</a>
+                </div>
+                <div class="project-item">
+                    <img src="Library/ProgrammingCover.png" alt="Project 2">
+                    <h3>Website Programming</h3>
+                    <p>This project demonstrates my foundational skills in front-end web development, including semantic HTML structure, responsive design, and custom styling with CSS. It reflects my ability to create clean, accessible, and visually cohesive web pages while applying core principles of layout, design consistency, and user experience. While this current Portfolio further displays my current level of development.</p>
+                    <a href="ProgrammingMidterm.html" class="cta-button" target="_blank">View Project</a>
+                </div>
+                <div class="project-item">
+                    <img src="Library/PrototypeCover.png" alt="Project 2">
+                    <h3>Usability and Design</h3>
+                    <p>his project explores core principles of user-centered design, focusing on accessibility, clarity, and intuitive interface layout. Using Figma, I applied foundational design concepts such as alignment, contrast, hierarchy, and spacing to create wireframes and prototypes that prioritize usability and visual consistency.</p>
+                    <a href="https://www.figma.com/design/6la9DxBODoMiZRdz5xrz46/Usability-and-Design-Final?node-id=0-1&t=R0k5fsnpUodo7YKD-1" class="cta-button" target="_blank">View Project</a>
+                </div>
+                 <div class="project-item">
+                    <img src="Library/Infographic.png" alt="Project 2">
+                    <h3>Infographic Content Creation</h3>
+                    <p>This project demonstrates my ability to distill complex information into clear, visually engaging graphics. Using design principles such as hierarchy, balance, and color theory, I created infographics that communicate key messages effectively while maintaining visual appeal and readability.</p>
+                    <a href="Library/ACFDVolunteeringTimeline.pdf " class="cta-button" target="_blank">View Project</a>
+                </div>
+            </div>
+        </div>
+
+
+
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Jacob's Portfolio. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="mailto:jfw001@lvc.edu">Email</a>
+            <a href="https://www.linkedin.com/in/jacob-winter-52a160263/">LinkedIn</a>
+            <a href="https://www.facebook.com/jacob.winter.33671">Facebook</a>
+        </div>
+    </footer>
+</body>
+</html>
