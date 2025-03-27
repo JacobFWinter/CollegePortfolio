@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketing - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer>
+        function toggleMenu() {
+            var menu = document.getElementById("nav-menu");
+            menu.classList.toggle("active");
+        }
+
+        document.addEventListener("click", function(event) {
+            var menu = document.getElementById("nav-menu");
+            var hamburger = document.querySelector(".hamburger");
+            if (!hamburger.contains(event.target) && !menu.contains(event.target)) {
+                menu.classList.remove("active");
+            }
+        });
+    </script>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: radial-gradient(circle, #2c3e50, #3a506b, #5c677d);
+            color: #fff;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            background: rgba(0, 0, 0, 0.7);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+        }
+        .logo img {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+        }
+        .hamburger {
+            font-size: 30px;
+            cursor: pointer;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+            transition: background 0.3s;
+            z-index: 1100;
+        }
+        .hamburger:hover {
+            background: rgba(255, 255, 255, 0.4);
+        }
+        nav {
+            position: fixed;
+            top: 60px;
+            right: 0;
+            width: 250px;
+            background: rgba(0, 0, 0, 0.9);
+            text-align: left;
+            border-radius: 5px;
+            padding: 10px;
+            display: none;
+            transition: transform 0.3s ease-in-out;
+            transform: translateX(100%);
+            z-index: 1000;
+        }
+        nav.active {
+            display: block;
+            transform: translateX(0);
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        nav ul li {
+            padding: 10px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            display: block;
+            transition: color 0.3s ease;
+        }
+        nav ul li a:hover {
+            color: #95a5a6;
+        }
+        .centered-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 20vh;
+        }
+
+        p, li {
+            text-align: left;
+        }
+        .content {
+            padding: 100px 20px 40px;
+            max-width: 800px;
+            margin: auto;
+            flex: 1;
+        }
+        .projects, .marketing-strategy, .case-studies, .gallery {
+            margin-top: 40px;
+        }
+        .project-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .project-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 5px;
+            width: 250px;
+        }
+        .project-item img {
+            width: 100%;
+            border-radius: 5px;
+        }
+        .cta-button {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 15px;
+            background: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .cta-button:hover {
+            background: #2980b9;
+        }
+        .gallery-grid {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        .gallery-grid img {
+            width: 200px;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        footer {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            text-align: center;
+            color: white;
+            margin-top: auto;
+        }
+        .footer-links a {
+            color: #95a5a6;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+           <a href= "homepage.html"><img src="logo.png" alt="Portfolio Logo"> </a>
+            Jacob Winter
+        </div>
+        <div class="hamburger" onclick="toggleMenu()">
+            &#9776;
+        </div>
+        <nav id="nav-menu">
+            <ul>
+                <li><a href="homepage.html">Homepage</a></li>
+                <li><a href="information.html">Information</a></li>
+                <li><a href="marketing.html">Marketing & Business Technology</a></li>
+                <li><a href="design.html">Design & Videography</a></li>
+                <li><a href="communications.html">Communications</a></li>
+                <li><a href="communications.html">Programming & User Experience</a></li>
+                <li><a href="contacts.html">Contacts</a></li>
+                <li><a href="aiusage.html">AI Usage</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="content">
+         <div class="centered-container">
+            <div class="container">
+        <h1>Marketing & Business Technology</h1>
+        <p>This section highlights my academic and practical experience in digital communications and strategic marketing. Featured here are projects that show my capabilities in app development, comprehensive marketing plan creation, brand repositioning strategy, and the formulation of an individual marketing plan. Each piece reflects a thoughtful integration of digital tools, analytical thinking, and creative problem-solving, designed to meet real-world marketing challenges and align with contemporary communication principles. </p>
+            </div>
+         </div>
+        <div class="projects">
+            <h2>Marketing Projects</h2>
+            <div class="project-grid">
+                <div class="project-item">
+                    <img src= "Library/MarketingPlanTitlePage.png" alt="Project 1">
+                    <h3>Individual Marketing Plan</h3>
+                    <p>Went through a series of self-evaluation creating an Individual Marketing Plan, to sell myself and plan my future, going over SWOT Analysis, Situational Analysis, Objectives & Goals, and Startegized Planning to create a designated plan for the future.</p>
+                    <a href="Library/IndividualMarketingPlan.pdf" class="cta-button" target="_blank">View Project</a>
+                </div>
+                <div class="project-item">
+                    <img src= "Library/StrategicMarketing.png" alt="Project 2">
+                    <h3>Marketing Plan Development</h3>
+                    <p>MBA-816 Internet Marketing, was a development of a Marketing Plan that included, Target Market, Market Analysis and Research, SWOT Analysis, and the Creation of a measures of success. </p>
+                    <a href= "Library/MarketingPlanDevelopment.pdf" class="cta-button" target="_blank">View Project</a>
+                </div>
+                <div class="project-item">
+                    <img src= "Library/BelperPlan.png" alt="Project 2">
+                    <h3>App Development</h3>
+                    <p>App Development Project for DCOM Capstone that displays Teamwork and Collaborative skills to finish a Development Plan, Prototype, and Market Analyzation Concept. This collabarative work is a foundation of the final capstone Prototype that will be complete by the end of the year.</p>
+                    <a href="Library/AppDevelopment.pdf" class="cta-button" target="_blank">View Project</a>
+                </div>
+                <div class="project-item">
+                    <img src= "Library/AppleRepositioningPlan.png" alt="Project 2">
+                    <h3>Repositioning Plan Development</h3>
+                    <p>Repositioning plan on a Collabarative team project that displays the ability to conduct market research, Risks Involved and Risk Management. This project also goes over work covering Product, Place, Price, and Promotion.</p>
+                    <a href= "Library/RepositioningPlan.pdf" class="cta-button" target="_blank">View Project</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="case-study">
+             <div class="centered-container">
+            <div class="container">
+            <h2>Collective Series of DAE's Conducted</h2>
+            <p>Several basic Case Study's were conducted to gain information on the Marketing field, and stay up to date with business changes and objectives. This was to engage, learn, and practice our Evaluation and Analyzation skills on real-time events and companies.</p>
+            <ul>
+                <li>📊 Evaluated 7 Different Companies and World Events</li>
+                <li>📢 Analyzed and Conducted and Opinionated Change and Recommendation</li>
+                <li>📈 Evaluate the effects on before and after market affairs, for certain case studies.</li>
+            </ul>
+            <a href= "Library/CaseStudiesDocument.pdf" class="cta-button" target="_blank">Read Full Case Study</a>
+        </div>
+             </div>
+        </div>
+
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Jacob's Portfolio. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="mailto:jfw001@lvc.edu">Email</a>
+            <a href="https://www.linkedin.com/in/jacob-winter-52a160263/">LinkedIn</a>
+            <a href="https://www.facebook.com/jacob.winter.33671">Facebook</a>
+        </div>
+    </footer>
+</body>
+</html>
