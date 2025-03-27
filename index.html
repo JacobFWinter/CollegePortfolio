@@ -98,6 +98,27 @@
             color: #95a5a6;
         }
         
+        /* Banner Section */
+        .banner {
+            background: #34495e;
+            padding: 50px 20px;
+            color: white;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 999;
+        }
+        .banner h1 {
+            font-size: 40px;
+            margin: 0;
+        }
+        .banner p {
+            font-size: 18px;
+            margin: 10px 0 0;
+        }
+        
         /* Hero Section */
         .hero {
             height: 100vh;
@@ -107,6 +128,7 @@
             flex-direction: column;
             text-align: center;
             padding: 20px;
+            margin-top: 100px; /* Adjust for banner height */
         }
         .hero h1 {
             font-size: 40px;
@@ -128,18 +150,6 @@
         .cta-button:hover {
             background: #34495e;
             transform: scale(1.05);
-        }
-
-        /* Banner Section */
-        .banner {
-            background: #34495e;
-            padding: 50px 20px;
-            color: white;
-            text-align: center;
-        }
-        .banner h2 {
-            font-size: 30px;
-            margin: 0;
         }
 
         /* Projects Section */
@@ -215,6 +225,11 @@
             </ul>
         </nav>
     </header>
+
+    <section class="banner">
+        <h1>Welcome to My Digital Portfolio</h1>
+        <p>Explore my journey in Digital Communications & Marketing</p>
+    </section>
     
     <section class="hero">
         <div class="hero-content">
@@ -222,10 +237,6 @@
             <p>Explore my journey in Digital Communications & Marketing</p>
             <a href="information.html" class="cta-button">Learn More</a>
         </div>
-    </section>
-
-    <section class="banner">
-        <h2>Discover My Latest Work</h2>
     </section>
 
     <section class="projects">
