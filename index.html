@@ -116,6 +116,14 @@
             font-size: 18px;
             margin-bottom: 20px;
         }
+
+        .fade-in {
+          opacity: 0;
+          transition: opacity 1s ease-in-out;
+        }
+        .fade-in.visible {
+          opacity: 1;
+        }
         .cta-button {
             background: #1338BE;
             color: white;
@@ -180,9 +188,11 @@
     
     <section class="hero">
         <div class="hero-content">
+              <div class="fade-in" data-aos="fade-up">
             <h1>Welcome to My Digital Portfolio</h1>
             <p>Explore my journey in Digital Communications & Marketing</p>
             <a href="information.html" class="cta-button">Learn More</a>
+        </div>
         </div>
     </section>
 
@@ -194,5 +204,12 @@
             <a href="https://www.facebook.com/jacob.winter.33671">Facebook</a>
         </div>
     </footer>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init();
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelector('.fade-in').classList.add('visible');
+    });
+  </script>
 </body>
 </html>
