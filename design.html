@@ -101,6 +101,16 @@
         nav ul li a:hover {
             color: #95a5a6;
         }
+        .centered-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 20vh;
+        }
+
+        p, li {
+            text-align: left;
+        }
         .content {
             padding: 100px 20px 40px;
             max-width: 800px;
@@ -172,7 +182,7 @@
     <header>
         <div class="logo">
            <a href= "homepage.html"><img src="logo.png" alt="Portfolio Logo"> </a>
-            Jacob's Portfolio
+            Jacob Winter
         </div>
         <div class="hamburger" onclick="toggleMenu()">
             &#9776;
@@ -190,9 +200,12 @@
         </nav>
     </header>
     <section class="content">
+         <div class="centered-container">
+            <div class="container">
         <h1>Design and Production</h1>
         <p>This page highlights my design experience, blending technical proficiency with creative problem-solving across multiple disciplines. From initial concept development to final execution, each project reflects a thoughtful approach to visual communication grounded in strong design principles. My work includes conceptual design, where ideas are shaped into clear visual strategies, and brand identity development, where logos and visual systems are crafted to convey meaning and consistency. I utilize Adobe InDesign to create clean, professional layouts with attention to hierarchy, typography, and structure. My video production skills cover editing, storyboarding, and post-production, while my Photoshop expertise allows for advanced image manipulation, compositing, and visual refinement. Together, these skills form a well-rounded portfolio rooted in both creativity and precision.</p>
-
+       </div>
+         </div>
         <div class="projects">
             <h2>Marketing Projects</h2>
             <div class="project-grid">
