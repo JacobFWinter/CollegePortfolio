@@ -130,6 +130,51 @@
             transform: scale(1.05);
         }
 
+        /* Banner Section */
+        .banner {
+            background: #34495e;
+            padding: 50px 20px;
+            color: white;
+            text-align: center;
+        }
+        .banner h2 {
+            font-size: 30px;
+            margin: 0;
+        }
+
+        /* Projects Section */
+        .projects {
+            padding: 50px 20px;
+            text-align: center;
+        }
+        .projects h2 {
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+        .project {
+            display: inline-block;
+            width: 30%;
+            margin: 1%;
+            background: #2c3e50;
+            padding: 20px;
+            border-radius: 5px;
+            transition: transform 0.3s;
+        }
+        .project img {
+            width: 100%;
+            border-radius: 5px;
+        }
+        .project h3 {
+            font-size: 24px;
+            margin: 10px 0;
+        }
+        .project p {
+            font-size: 16px;
+        }
+        .project:hover {
+            transform: scale(1.05);
+        }
+
         /* Footer Section */
         footer {
             background: rgba(0, 0, 0, 0.8);
@@ -151,7 +196,7 @@
 <body>
     <header>
         <div class="logo">
-           <a href= "index.html"><img src="logo.png" alt="Portfolio Logo"> </a>
+            <a href="index.html"><img src="logo.png" alt="Portfolio Logo"></a>
             Jacob Winter
         </div>
         <div class="hamburger" onclick="toggleMenu()">
@@ -176,6 +221,29 @@
             <h1>Welcome to My Digital Portfolio</h1>
             <p>Explore my journey in Digital Communications & Marketing</p>
             <a href="information.html" class="cta-button">Learn More</a>
+        </div>
+    </section>
+
+    <section class="banner">
+        <h2>Discover My Latest Work</h2>
+    </section>
+
+    <section class="projects">
+        <h2>Featured Projects</h2>
+        <div class="project">
+            <img src="project1.jpg" alt="Project 1">
+            <h3>Project One</h3>
+            <p>Brief description of Project One.</p>
+        </div>
+        <div class="project">
+            <img src="project2.jpg" alt="Project 2">
+            <h3>Project Two</h3>
+            <p>Brief description of Project Two.</p>
+        </div>
+        <div class="project">
+            <img src="project3.jpg" alt="Project 3">
+            <h3>Project Three</h3>
+            <p>Brief description of Project Three.</p>
         </div>
     </section>
 
