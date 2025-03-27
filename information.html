@@ -42,10 +42,6 @@
             left: 0;
             z-index: 1000;
         }
-        .container {
-      text-align: left;
-      max-width: 600px; /* Optional: controls text width */
-        }
         .logo {
             font-size: 24px;
             font-weight: bold;
@@ -105,7 +101,7 @@
         nav ul li a:hover {
             color: #95a5a6;
         }
-               .content {
+        .content {
             padding: 100px 20px 40px;
             max-width: 800px;
             margin: auto;
@@ -171,12 +167,22 @@
         .footer-links a:hover {
             text-decoration: underline;
         }
+        .centered-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            text-align: left;
+            max-width: 600px;
+        }
     </style>
 </head>
 <body>
     <header>
         <div class="logo">
-           <a href= "homepage.html"><img src="logo.png" alt="Portfolio Logo"> </a>
+           <a href="homepage.html"><img src="logo.png" alt="Portfolio Logo"> </a>
             Jacob's Portfolio
         </div>
         <div class="hamburger" onclick="toggleMenu()">
@@ -196,20 +202,17 @@
     </header>
     <section class="content">
         <h1>Information</h1>
-
-<body>
-  <div class="container">
-    <p>Welcome to the information section of my portfolio. Here, you'll find details about my background, skills, and experiences in Digital Communications and Marketing. While lacking the work force experience in Communications and Marketing, my job experience shows my determination to learn and provide the best quality of work I can.</p>
-  </div>
-</body>
-       
-    <div class="testimonials">
+        <div class="centered-container">
+            <div class="container">
+                <p>Welcome to the information section of my portfolio. Here, you'll find details about my background, skills, and experiences in Digital Communications and Marketing. While lacking the work force experience in Communications and Marketing, my job experience shows my determination to learn and provide the best quality of work I can.</p>
+            </div>
+        </div>
+        <div class="testimonials">
             <h2>What Others Say</h2>
             <blockquote>"A highly dedicated, motivated, and all around great worker who supports and helps those around him." - Sort Manager Dariel Santana, FedEx Ground.</blockquote>
-             <blockquote>"One of the most reliable people in the building, who is capable of doing almost any task given to him, whether it be training new hires or working in new locations with new people. He always lightens the day and improves the quality of work." - Sort Manager Eric McNeil, FedEx Ground. </blockquote>
+            <blockquote>"One of the most reliable people in the building, who is capable of doing almost any task given to him, whether it be training new hires or working in new locations with new people." - Manager Matthew, Karns Deli.</blockquote>
             <blockquote>"His ability to manage shelf stock changes and customer sales habits helped maintain the preparedness that the Karns Deli obtained." - Manager Matthew, Karns Deli Manager.</blockquote>
         </div>
-
         <div class="skills">
             <h2>Skills & Expertise</h2>
             <ul>
@@ -227,14 +230,11 @@
                 <li>Conflict Resolution</li>
             </ul>
         </div>
-
         <div class="cta-section">
             <h2>Want to See My Resume?</h2>
             <a href="Library/ResumeNew.pdf" class="cta-button" target="_blank">Click Here!</a>
         </div>
     </section>
-
-
     <footer>
         <p>&copy; 2025 Jacob's Portfolio. All rights reserved.</p>
         <div class="footer-links">
