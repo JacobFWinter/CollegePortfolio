@@ -4,7 +4,188 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Marketing - Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #2c3e50, #4ca1af);
+            background-image: url('path/to/your/image.jpg'); /* Add your image path here */
+            background-size: cover; /* This will make sure the image covers the entire background */
+            background-repeat: no-repeat; /* This will prevent the image from repeating */
+            background-position: center; /* This will center the image in the background */
+            color: #fff;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Header Styles */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            background: rgba(0, 0, 0, 0.7);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .hamburger {
+            font-size: 30px;
+            cursor: pointer;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .hamburger:hover {
+            background: rgba(255, 255, 255, 0.4);
+        }
+
+        nav {
+            position: absolute;
+            top: 60px;
+            right: 0;
+            width: 250px;
+            background: rgba(0, 0, 0, 0.9);
+            text-align: left;
+            border-radius: 5px;
+            padding: 10px;
+            display: none;
+            transition: all 0.3s ease;
+        }
+
+        nav.active {
+            display: block;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            padding: 10px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            display: block;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #95a5a6;
+        }
+
+        /* Content Section */
+        .content {
+            padding: 100px 20px 40px;
+            max-width: 800px;
+            margin: auto;
+            flex: 1;
+        }
+
+        .projects, .marketing-strategy, .case-studies, .gallery {
+            margin-top: 40px;
+        }
+
+        .project-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .project-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 5px;
+            width: 250px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .project-item img {
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 15px;
+            background: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .cta-button:hover {
+            background: #2980b9;
+        }
+
+        .gallery-grid {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .gallery-grid img {
+            width: 200px;
+            height: auto;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Footer Section */
+        footer {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            text-align: center;
+            color: white;
+            margin-top: auto;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        .footer-links a {
+            color: #95a5a6;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: #fff;
+        }
+    </style>
     <script defer>
         function toggleMenu() {
             var menu = document.getElementById("nav-menu");
@@ -18,168 +199,11 @@
                 menu.classList.remove("active");
             }
         });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelector('.fade-in').classList.add('visible');
+        });
     </script>
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Roboto', sans-serif;
-            background: linear-gradient(135deg, #2c3e50, #3a506b, #5c677d);
-            color: #fff;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-            line-height: 1.6;
-        }
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 20px;
-            background: rgba(0, 0, 0, 0.7);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            left: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
-            display: flex;
-            align-items: center;
-        }
-        .logo img {
-            width: 40px;
-            height: 40px;
-            margin-right: 10px;
-        }
-        .hamburger {
-            font-size: 30px;
-            cursor: pointer;
-            padding: 10px;
-            background: rgba(255, 255, 255, 0.2);
-            border-radius: 5px;
-            transition: background 0.3s;
-            z-index: 1100;
-        }
-        .hamburger:hover {
-            background: rgba(255, 255, 255, 0.4);
-        }
-        nav {
-            position: fixed;
-            top: 60px;
-            right: 0;
-            width: 250px;
-            background: rgba(0, 0, 0, 0.9);
-            text-align: left;
-            border-radius: 5px;
-            padding: 10px;
-            display: none;
-            transition: transform 0.3s ease-in-out;
-            transform: translateX(100%);
-            z-index: 1000;
-        }
-        nav.active {
-            display: block;
-            transform: translateX(0);
-        }
-        nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-        nav ul li {
-            padding: 10px;
-        }
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-size: 18px;
-            display: block;
-            transition: color 0.3s ease;
-        }
-        nav ul li a:hover {
-            color: #95a5a6;
-        }
-        .centered-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 20vh;
-        }
-        p, li {
-            text-align: left;
-        }
-        .content {
-            padding: 100px 20px 40px;
-            max-width: 800px;
-            margin: auto;
-            flex: 1;
-        }
-        .projects, .marketing-strategy, .case-studies, .gallery {
-            margin-top: 40px;
-        }
-        .project-grid {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-        }
-        .project-item {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 15px;
-            border-radius: 5px;
-            width: 250px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        .project-item img {
-            width: 100%;
-            border-radius: 5px;
-        }
-        .cta-button {
-            display: inline-block;
-            margin-top: 10px;
-            padding: 8px 15px;
-            background: #3498db;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background 0.3s;
-        }
-        .cta-button:hover {
-            background: #2980b9;
-        }
-        .gallery-grid {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
-        .gallery-grid img {
-            width: 200px;
-            height: auto;
-            border-radius: 5px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        footer {
-            background: rgba(0, 0, 0, 0.8);
-            padding: 20px;
-            text-align: center;
-            color: white;
-            margin-top: auto;
-            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
-        }
-        .footer-links a {
-            color: #95a5a6;
-            text-decoration: none;
-            margin: 0 10px;
-        }
-        .footer-links a:hover {
-            text-decoration: underline;
-        }
-    </style>
 </head>
 <body>
     <header>
@@ -203,11 +227,12 @@
             </ul>
         </nav>
     </header>
+
     <section class="content">
         <div class="centered-container">
             <div class="container">
                 <h1>Marketing & Business Technology</h1>
-                <p>This section highlights my academic and practical experience in digital communications and strategic marketing. Featured here are projects that show my capabilities in app development, strategic planning, and more.</p>
+                <p>This section highlights my academic and practical experience in digital communications and strategic marketing. Featured here are projects that show my capabilities in app development, strategic planning, and market analysis.</p>
             </div>
         </div>
         <div class="projects">
@@ -216,7 +241,7 @@
                 <div class="project-item">
                     <img src="Library/MarketingPlanTitlePage.png" alt="Project 1">
                     <h3>Individual Marketing Plan</h3>
-                    <p>Went through a series of self-evaluation creating an Individual Marketing Plan, to sell myself and plan my future, going over SWOT Analysis, Situational Analysis, Objectives, and more.</p>
+                    <p>Went through a series of self-evaluation creating an Individual Marketing Plan, to sell myself and plan my future, going over SWOT Analysis, Situational Analysis, Objective setting, and more.</p>
                     <a href="Library/IndividualMarketingPlan.pdf" class="cta-button" target="_blank">View Project</a>
                 </div>
                 <div class="project-item">
@@ -226,15 +251,15 @@
                     <a href="Library/MarketingPlanDevelopment.pdf" class="cta-button" target="_blank">View Project</a>
                 </div>
                 <div class="project-item">
-                    <img src="Library/BelperPlan.png" alt="Project 2">
+                    <img src="Library/BelperPlan.png" alt="Project 3">
                     <h3>App Development</h3>
-                    <p>App Development Project for DCOM Capstone that displays Teamwork and Collaborative skills to finish a Development Plan, Prototype, and Market Analyzation Concept. This collaborative effort resulted in a comprehensive app development plan.</p>
+                    <p>App Development Project for DCOM Capstone that displays Teamwork and Collaborative skills to finish a Development Plan, Prototype, and Market Analyzation Concept. This collaborative project aimed to create a functional app prototype.</p>
                     <a href="Library/AppDevelopment.pdf" class="cta-button" target="_blank">View Project</a>
                 </div>
                 <div class="project-item">
-                    <img src="Library/AppleRepositioningPlan.png" alt="Project 2">
+                    <img src="Library/AppleRepositioningPlan.png" alt="Project 4">
                     <h3>Repositioning Plan Development</h3>
-                    <p>Repositioning plan on a Collaborative team project that displays the ability to conduct market research, Risks Involved, and Risk Management. This project also goes over working in a team to reposition a product in the market.</p>
+                    <p>Repositioning plan on a Collaborative team project that displays the ability to conduct market research, Risks Involved, and Risk Management. This project also goes over working with cross-functional teams.</p>
                     <a href="Library/RepositioningPlan.pdf" class="cta-button" target="_blank">View Project</a>
                 </div>
             </div>
@@ -243,7 +268,7 @@
             <div class="centered-container">
                 <div class="container">
                     <h2>Collective Series of DAE's Conducted</h2>
-                    <p>Several basic Case Studies were conducted to gain information on the Marketing field, and stay up to date with business changes and objectives. This was to engage, learn, and practice marketing strategies.</p>
+                    <p>Several basic Case Studies were conducted to gain information on the Marketing field, and stay up to date with business changes and objectives. This was to engage, learn, and apply strategic marketing concepts.</p>
                     <ul>
                         <li>📊 Evaluated 7 Different Companies and World Events</li>
                         <li>📢 Analyzed and Conducted and Opinionated Change and Recommendation</li>
@@ -262,5 +287,10 @@
             <a href="https://www.facebook.com/jacob.winter.33671">Facebook</a>
         </div>
     </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>
