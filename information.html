@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Information - Student Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <script defer>
         function toggleMenu() {
             var menu = document.getElementById("nav-menu");
@@ -22,8 +24,8 @@
     <style>
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
-            background: radial-gradient(circle, #2c3e50, #3a506b, #5c677d);
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(45deg, #2c3e50, #3a506b, #5c677d, #3498db);
             color: #fff;
             text-align: center;
             display: flex;
@@ -96,28 +98,31 @@
             text-decoration: none;
             font-size: 18px;
             display: block;
-            transition: color 0.3s ease;
+            transition: color 0.3s ease, transform 0.3s ease;
         }
         nav ul li a:hover {
             color: #95a5a6;
+            transform: scale(1.05);
         }
         .content {
             padding: 100px 20px 40px;
             max-width: 800px;
             margin: auto;
             flex: 1;
+            animation: fadeInUp 1s ease-in-out;
         }
         .content h1 {
             font-size: 36px;
             margin-bottom: 20px;
         }
         .content p {
-            font-size: 18px;
+            font-size: 20px;
             line-height: 1.6;
         }
         .testimonials, .skills, .cta-section {
-            margin-top: 40px;
-            padding: 20px;
+            text-align: center;
+            padding: 40px 20px;
+            animation: fadeInUp 1s ease-in-out;
         }
         .testimonials h2, .skills h2, .cta-section h2 {
             font-size: 28px;
@@ -125,20 +130,21 @@
         }
         .testimonials blockquote {
             font-style: italic;
-            background: rgba(255, 255, 255, 0.1);
-            padding: 15px;
-            border-radius: 5px;
+            background: rgba(255, 255, 255, 0.2);
+            border-left: 5px solid #3498db;
+            padding: 20px;
+            margin: 20px 0;
         }
         .skills ul {
             list-style: none;
             padding: 0;
         }
         .skills ul li {
-            font-size: 18px;
+            font-size: 20px;
             margin: 5px 0;
         }
         .cta-button {
-            background: #3498db;
+            background: linear-gradient(45deg, #3498db, #2980b9);
             color: white;
             padding: 10px 20px;
             text-decoration: none;
@@ -177,6 +183,17 @@
             text-align: left;
             max-width: 600px;
         }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
     </style>
 </head>
 <body>
@@ -205,14 +222,14 @@
         <h1>Information</h1>
         <div class="centered-container">
             <div class="container">
-                <p>Welcome to the information section of my portfolio. Here, you'll find details about my background, skills, and experiences in Digital Communications and Marketing. While lacking the work force experience in Communications and Marketing, my job experience shows my determination to learn and provide the best quality of work I can.</p>
+                <p>Welcome to the information section of my portfolio. Here, you'll find details about my background, skills, and experiences in Digital Communications and Marketing. While lackin[...]
             </div>
         </div>
         <div class="testimonials">
             <h2>What Others Say</h2>
             <blockquote>"A highly dedicated, motivated, and all around great worker who supports and helps those around him." - Sort Manager Dariel Santana, FedEx Ground.</blockquote>
-            <blockquote>"One of the most reliable people in the building, who is capable of doing almost any task given to him, whether it be training new hires or working in new locations with new people." - Manager Matthew, Karns Deli.</blockquote>
-            <blockquote>"His ability to manage shelf stock changes and customer sales habits helped maintain the preparedness that the Karns Deli obtained." - Manager Matthew, Karns Deli Manager.</blockquote>
+            <blockquote>"One of the most reliable people in the building, who is capable of doing almost any task given to him, whether it be training new hires or working in new locations with n[...]
+            <blockquote>"His ability to manage shelf stock changes and customer sales habits helped maintain the preparedness that the Karns Deli obtained." - Manager Matthew, Karns Deli Manager.[...]
         </div>
         <div class="skills">
             <h2>Skills & Expertise</h2>
@@ -243,9 +260,9 @@
     <footer>
         <p>&copy; 2025 Jacob's Portfolio. All rights reserved.</p>
         <div class="footer-links">
-            <a href="mailto:jfw001@lvc.edu">Email</a>
-            <a href="https://www.linkedin.com/in/jacob-winter-52a160263/">LinkedIn</a>
-            <a href="https://www.facebook.com/jacob.winter.33671">Facebook</a>
+            <a href="mailto:jfw001@lvc.edu"><i class="fas fa-envelope"></i> Email</a>
+            <a href="https://www.linkedin.com/in/jacob-winter-52a160263/"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            <a href="https://www.facebook.com/jacob.winter.33671"><i class="fab fa-facebook"></i> Facebook</a>
         </div>
     </footer>
 </body>
