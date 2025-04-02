@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marketing - Portfolio</title>
+    <title>Programming & User Experience - Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <script defer>
         function toggleMenu() {
             var menu = document.getElementById("nav-menu");
@@ -22,8 +24,8 @@
     <style>
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
-            background: radial-gradient(circle, #2c3e50, #3a506b, #5c677d);
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(45deg, #2c3e50, #3a506b, #5c677d, #3498db);
             color: #fff;
             text-align: center;
             display: flex;
@@ -96,44 +98,51 @@
             text-decoration: none;
             font-size: 18px;
             display: block;
-            transition: color 0.3s ease;
+            transition: color 0.3s ease, transform 0.3s ease;
         }
         nav ul li a:hover {
             color: #95a5a6;
-        }
-        .centered-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 20vh;
-        }
-
-        p, li {
-            text-align: left;
-            line-height: 1.6;
+            transform: scale(1.05);
         }
         .content {
             padding: 100px 20px 40px;
             max-width: 800px;
             margin: auto;
             flex: 1;
+            animation: fadeInUp 1s ease-in-out;
         }
-        .projects, .marketing-strategy, .case-studies, .gallery {
+        .content h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        .content p {
+            font-size: 20px;
+            line-height: 1.6;
+        }
+        .projects, .marketing-strategy, .gallery {
             margin-top: 40px;
+            text-align: center;
+            padding: 40px 20px;
+            animation: fadeInUp 1s ease-in-out;
         }
-        .project-grid {
+        .projects h2, .marketing-strategy h2, .gallery h2 {
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+        .project-grid, .gallery-grid {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             gap: 20px;
         }
-        .project-item {
+        .project-item, .gallery-grid img {
             background: rgba(255, 255, 255, 0.1);
             padding: 15px;
             border-radius: 5px;
             width: 250px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
-        .project-item img {
+        .project-item img, .gallery-grid img {
             width: 100%;
             border-radius: 5px;
         }
@@ -141,27 +150,17 @@
             display: inline-block;
             margin-top: 10px;
             padding: 8px 15px;
-            background: #3498db;
+            background: linear-gradient(45deg, #3498db, #2980b9);
             color: white;
             text-decoration: none;
+            font-size: 20px;
             border-radius: 5px;
-            transition: background 0.3s;
+            transition: background 0.3s, transform 0.2s;
         }
         .cta-button:hover {
             background: #2980b9;
+            transform: scale(1.05);
         }
-        .gallery-grid {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
-        .gallery-grid img {
-            width: 200px;
-            height: auto;
-            border-radius: 5px;
-        }
-
         footer {
             background: rgba(0, 0, 0, 0.8);
             padding: 20px;
@@ -177,14 +176,22 @@
         .footer-links a:hover {
             text-decoration: underline;
         }
-
-
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
     </style>
 </head>
 <body>
     <header>
         <div class="logo">
-           <a href= "index.html"><img src="logo.png" alt="Portfolio Logo"> </a>
+            <a href="index.html"><img src="logo.png" alt="Portfolio Logo"></a>
             Jacob Winter
         </div>
         <div class="hamburger" onclick="toggleMenu()">
@@ -204,52 +211,36 @@
         </nav>
     </header>
     <section class="content">
-         <div class="centered-container">
-            <div class="container">
         <h1>Programming & User Experience</h1>
-        <p>Bridging functionality and usability, our programming and user experience work focuses on building intuitive, human-centered digital solutions. From front-end development to interactive prototypes, each project is designed with the user in mind—prioritizing clarity, responsiveness, and seamless interaction. We combine clean, efficient code with thoughtful UX design principles to ensure that every interface not only works well but feels natural to navigate. Through testing, iteration, and attention to detail, we strive to create digital experiences that are both technically sound and genuinely engaging.</p>
+        <div class="centered-container">
+            <div class="container">
+                <p>Bridging functionality and usability, our programming and user experience work focuses on building intuitive, human-centered digital solutions. From front-end development to interactive prototypes, each project demonstrates a commitment to high-quality, user-friendly design.</p>
             </div>
-         </div>
-
-        <div class="sub-information">
-
-            <h2>Key Learnings from Digital Communications</h2>
-            <ul>
-                <li>Built responsive, accessible interfaces that adapt smoothly across devices and platforms.</li>
-                <li>Adapted quickly to changing requirements through agile workflows</li>
-                <li>HTML and CSS challenged me at first, but building pages from scratch helped me gain confidence in coding and reinforced the connection between structure, design, and user experience.</li>
-                <li>Gained hands-on experience with wireframing and prototyping tools like Figma</li>
-                <li>Improved problem-solving skills through debugging and testing across different devices.</li>
-                <li>Used user feedback to refine designs and improve the overall experience.</li>
-            </ul>
         </div>
-        
         <div class="projects">
-            <h2>Marketing Projects</h2>
+            <h2>Programming & UX Projects</h2>
             <div class="project-grid">
                 <div class="project-item">
                     <img src="Library/ProgrammingCover.png" alt="Project 2">
                     <h3>Website Programming</h3>
-                    <p>This project demonstrates my foundational skills in front-end web development, including semantic HTML structure, responsive design, and custom styling with CSS. It reflects my ability to create clean, accessible, and visually cohesive web pages while applying core principles of layout, design consistency, and user experience. While this current Portfolio further displays my current level of development.</p>
+                    <p>This project demonstrates my foundational skills in front-end web development, including semantic HTML structure, responsive design, and custom styling with CSS. It reflects a comprehensive understanding of how to build user-friendly web interfaces from scratch.</p>
                     <a href="Library/ProgrammingMidterm.html" class="cta-button" target="_blank">View Project</a>
                 </div>
                 <div class="project-item">
                     <img src="Library/PrototypeCover.png" alt="Project 2">
                     <h3>Usability and Design</h3>
-                    <p>his project explores core principles of user-centered design, focusing on accessibility, clarity, and intuitive interface layout. Using Figma, I applied foundational design concepts such as alignment, contrast, hierarchy, and spacing to create wireframes and prototypes that prioritize usability and visual consistency.</p>
+                    <p>This project explores core principles of user-centered design, focusing on accessibility, clarity, and intuitive interface layout. Using Figma, I applied foundational design principles to create prototypes that prioritize user experience.</p>
                     <a href="https://www.figma.com/design/6la9DxBODoMiZRdz5xrz46/Usability-and-Design-Final?node-id=0-1&t=R0k5fsnpUodo7YKD-1" class="cta-button" target="_blank">View Project</a>
-                </div>               
+                </div>
             </div>
         </div>
-
     </section>
-
     <footer>
         <p>&copy; 2025 Jacob's Portfolio. All rights reserved.</p>
         <div class="footer-links">
-            <a href="mailto:jfw001@lvc.edu">Email</a>
-            <a href="https://www.linkedin.com/in/jacob-winter-52a160263/">LinkedIn</a>
-            <a href="https://www.facebook.com/jacob.winter.33671">Facebook</a>
+            <a href="mailto:jfw001@lvc.edu"><i class="fas fa-envelope"></i> Email</a>
+            <a href="https://www.linkedin.com/in/jacob-winter-52a160263/"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            <a href="https://www.facebook.com/jacob.winter.33671"><i class="fab fa-facebook"></i> Facebook</a>
         </div>
     </footer>
 </body>
