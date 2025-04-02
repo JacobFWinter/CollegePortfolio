@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Communications - Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <script defer>
         function toggleMenu() {
             var menu = document.getElementById("nav-menu");
@@ -22,8 +24,8 @@
     <style>
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
-            background: radial-gradient(circle, #2c3e50, #3a506b, #5c677d);
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(45deg, #2c3e50, #3a506b, #5c677d, #3498db);
             color: #fff;
             text-align: center;
             display: flex;
@@ -96,30 +98,36 @@
             text-decoration: none;
             font-size: 18px;
             display: block;
-            transition: color 0.3s ease;
+            transition: color 0.3s ease, transform 0.3s ease;
         }
         nav ul li a:hover {
             color: #95a5a6;
-        }
-        .centered-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 20vh;
-        }
-
-        p, li {
-            text-align: left;
-            line-height: 1.6;
+            transform: scale(1.05);
         }
         .content {
             padding: 100px 20px 40px;
             max-width: 800px;
             margin: auto;
             flex: 1;
+            animation: fadeInUp 1s ease-in-out;
+        }
+        .content h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        .content p {
+            font-size: 20px;
+            line-height: 1.6;
         }
         .projects, .marketing-strategy, .gallery {
             margin-top: 40px;
+            text-align: center;
+            padding: 40px 20px;
+            animation: fadeInUp 1s ease-in-out;
+        }
+        .projects h2, .marketing-strategy h2, .gallery h2 {
+            font-size: 28px;
+            margin-bottom: 15px;
         }
         .project-grid {
             display: flex;
@@ -132,6 +140,7 @@
             padding: 15px;
             border-radius: 5px;
             width: 250px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
         .project-item img {
             width: 100%;
@@ -141,14 +150,16 @@
             display: inline-block;
             margin-top: 10px;
             padding: 8px 15px;
-            background: #3498db;
+            background: linear-gradient(45deg, #3498db, #2980b9);
             color: white;
             text-decoration: none;
+            font-size: 20px;
             border-radius: 5px;
-            transition: background 0.3s;
+            transition: background 0.3s, transform 0.2s;
         }
         .cta-button:hover {
             background: #2980b9;
+            transform: scale(1.05);
         }
         .gallery-grid {
             display: flex;
@@ -160,8 +171,8 @@
             width: 200px;
             height: auto;
             border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
-
         footer {
             background: rgba(0, 0, 0, 0.8);
             padding: 20px;
@@ -177,12 +188,32 @@
         .footer-links a:hover {
             text-decoration: underline;
         }
+        .centered-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 20vh;
+        }
+        .container {
+            text-align: left;
+            max-width: 600px;
+        }
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
     </style>
 </head>
 <body>
     <header>
         <div class="logo">
-           <a href= "index.html"><img src="logo.png" alt="Portfolio Logo"> </a>
+            <a href="index.html"><img src="logo.png" alt="Portfolio Logo"></a>
             Jacob Winter
         </div>
         <div class="hamburger" onclick="toggleMenu()">
@@ -204,12 +235,11 @@
     <section class="content">
         <div class="centered-container">
             <div class="container">
-        <h1>Digital Communications</h1>
-        <p>This page showcases a collection of projects that blend problem-solving, prototype creation, and visual communication. Each project highlights a hands-on approach to identifying challenges and developing thoughtful solutions through iterative design and functional prototypes. Alongside these technical explorations, you'll find editorial content created for magazines—where storytelling, layout, and visual hierarchy come together to engage readers. Complementing these are infographic designs that distill complex data into clear, compelling visuals, demonstrating a strong grasp of visual strategy and information design. Together, these works reflect a multidisciplinary approach to creative thinking and effective communication.</p>
+                <h1>Digital Communications</h1>
+                <p>This page showcases a collection of projects that blend problem-solving, prototype creation, and visual communication. Each project highlights a hands-on approach to identifying challenges and developing creative solutions.</p>
             </div>
-         </div>
-                <div class="sub-information">
-
+        </div>
+        <div class="sub-information">
             <h2>Key Learnings from Digital Communications</h2>
             <ul>
                 <li>Developed a structured approach to problem-solving through research, ideation, and iterative design.</li>
@@ -219,41 +249,36 @@
                 <li>Deepened understanding of user-centered design and the importance of feedback in shaping final outcomes.</li>
             </ul>
         </div>
-
         <div class="projects">
             <h2>Digital Communication Projects</h2>
             <div class="project-grid">
                 <div class="project-item">
                     <img src="Library/MagazineCover.png" alt="Project 2">
                     <h3>Content Creation</h3>
-                    <p>This project showcases my ability to develop cohesive editorial content, visual design, and layout for a full-length magazine. Through this process, I applied skills in storytelling, audience targeting, content planning, typography, and visual hierarchy—demonstrating a strong understanding of both written and visual communication within a publication format.</p>
+                    <p>This project showcases my ability to develop cohesive editorial content, visual design, and layout for a full-length magazine. Through this process, I applied skills in storytelling, design, and project management.</p>
                     <a href="Library/MagazineConcept.pdf" class="cta-button" target="_blank">View Project</a>
                 </div>
-                 <div class="project-item">
+                <div class="project-item">
                     <img src="Library/Infographic.png" alt="Project 2">
                     <h3>Infographic Content Creation</h3>
-                    <p>This project demonstrates my ability to distill complex information into clear, visually engaging graphics. Using design principles such as hierarchy, balance, and color theory, I created infographics that communicate key messages effectively while maintaining visual appeal and readability.</p>
-                    <a href="Library/ACFDVolunteeringTimeline.pdf " class="cta-button" target="_blank">View Project</a>
+                    <p>This project demonstrates my ability to distill complex information into clear, visually engaging graphics. Using design principles such as hierarchy, balance, and color theory, I created an effective communication tool.</p>
+                    <a href="Library/ACFDVolunteeringTimeline.pdf" class="cta-button" target="_blank">View Project</a>
                 </div>
                 <div class="project-item">
                     <img src="Library/PrototypingCover.png" alt="Project 1">
                     <h3>Problem Solving and Prototype Creation</h3>
-                    <p>This project highlights my ability and my project workmates ability to identify communication challenges and develop strategic content solutions through iterative prototyping. From concept to execution, these projects showcase how I apply critical thinking, audience analysis, and design tools to create impactful, user-centered digital content.</p>
+                    <p>This project highlights my ability and my project workmates' ability to identify communication challenges and develop strategic content solutions through iterative prototyping and testing.</p>
                     <a href="Library/DCOM262BPBGroupPresentation.pdf" class="cta-button" target="_blank">View Project</a>
                 </div>
             </div>
         </div>
-
-
-
     </section>
-
     <footer>
         <p>&copy; 2025 Jacob's Portfolio. All rights reserved.</p>
         <div class="footer-links">
-            <a href="mailto:jfw001@lvc.edu">Email</a>
-            <a href="https://www.linkedin.com/in/jacob-winter-52a160263/">LinkedIn</a>
-            <a href="https://www.facebook.com/jacob.winter.33671">Facebook</a>
+            <a href="mailto:jfw001@lvc.edu"><i class="fas fa-envelope"></i> Email</a>
+            <a href="https://www.linkedin.com/in/jacob-winter-52a160263/"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            <a href="https://www.facebook.com/jacob.winter.33671"><i class="fab fa-facebook"></i> Facebook</a>
         </div>
     </footer>
 </body>
