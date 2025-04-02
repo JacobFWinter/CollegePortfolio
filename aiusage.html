@@ -1,227 +1,233 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Set the character encoding for the document to UTF-8 -->
     <meta charset="UTF-8">
+    <!-- Set the viewport to make the website responsive on all devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Define the title of the webpage, which appears in the browser tab -->
     <title>AI Usage - Portfolio</title>
+    <!-- Link to Font Awesome library for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Link to the external stylesheet for custom styles -->
     <link rel="stylesheet" href="styles.css">
+    <!-- Link to the external script for additional JavaScript functionality -->
     <script defer src="scripts.js"></script>
     <style>
         /* General Styles */
         html, body {
-            height: 100%;
-            margin: 0;
-            font-family: 'Roboto', sans-serif;
-            background: linear-gradient(135deg, #2c3e50, #3a506b, #5c677d);
-            color: #fff;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
+            height: 100%; /* Full height */
+            margin: 0; /* Remove default margin */
+            font-family: 'Roboto', sans-serif; /* Set the font family */
+            background: linear-gradient(135deg, #2c3e50, #3a506b, #5c677d); /* Gradient background */
+            color: #fff; /* Set the text color to white */
+            text-align: center; /* Center-align the text */
+            display: flex; /* Use flexbox for layout */
+            flex-direction: column; /* Stack content vertically */
         }
 
         /* Wrapper to push footer down */
         .wrapper {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
+            flex: 1; /* Allow the wrapper to grow */
+            display: flex; /* Use flexbox for layout */
+            flex-direction: column; /* Stack content vertically */
         }
 
         /* Header Styles */
         header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 20px;
-            background: rgba(0, 0, 0, 0.7);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            left: 0;
-            z-index: 1000;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            display: flex; /* Use flexbox for layout */
+            justify-content: space-between; /* Space out the elements */
+            align-items: center; /* Align items vertically */
+            padding: 15px 20px; /* Add padding */
+            background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+            position: fixed; /* Fix the header at the top */
+            width: 100%; /* Full width */
+            top: 0; /* Align to the top */
+            left: 0; /* Align to the left */
+            z-index: 1000; /* Ensure the header is above other elements */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Add shadow for depth */
         }
         .logo {
-            font-size: 24px;
-            font-weight: bold;
-            display: flex;
-            align-items: center;
+            font-size: 24px; /* Font size for the logo */
+            font-weight: bold; /* Bold font */
+            display: flex; /* Use flexbox for layout */
+            align-items: center; /* Align items vertically */
         }
         .logo img {
-            width: 40px;
-            height: 40px;
-            margin-right: 10px;
+            width: 40px; /* Set the width of the logo image */
+            height: 40px; /* Set the height of the logo image */
+            margin-right: 10px; /* Add margin to the right of the image */
         }
         .hamburger {
-            font-size: 30px;
-            cursor: pointer;
-            padding: 10px;
-            background: rgba(255, 255, 255, 0.2);
-            border-radius: 5px;
-            transition: background 0.3s;
+            font-size: 30px; /* Font size for the hamburger icon */
+            cursor: pointer; /* Change cursor to pointer on hover */
+            padding: 10px; /* Add padding */
+            background: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+            border-radius: 5px; /* Rounded corners */
+            transition: background 0.3s; /* Smooth transition for background change */
         }
         .hamburger:hover {
-            background: rgba(255, 255, 255, 0.4);
+            background: rgba(255, 255, 255, 0.4); /* Change background on hover */
         }
         nav {
-            position: absolute;
-            top: 60px;
-            right: 0;
-            width: 250px;
-            background: rgba(0, 0, 0, 0.9);
-            text-align: left;
-            border-radius: 5px;
-            padding: 10px;
-            display: none;
-            transition: all 0.3s ease;
+            position: absolute; /* Position the nav elements absolute */
+            top: 60px; /* Position below the header */
+            right: 0; /* Align to the right */
+            width: 250px; /* Set the width */
+            background: rgba(0, 0, 0, 0.9); /* Semi-transparent background */
+            text-align: left; /* Align text to the left */
+            border-radius: 5px; /* Rounded corners */
+            padding: 10px; /* Add padding */
+            display: none; /* Hide the nav by default */
+            transition: all 0.3s ease; /* Smooth transition for all properties */
         }
         nav.active {
-            display: block;
+            display: block; /* Display the nav when active */
         }
         nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
+            list-style: none; /* Remove default list style */
+            padding: 0; /* Remove default padding */
+            margin: 0; /* Remove default margin */
         }
         nav ul li {
-            padding: 10px;
+            padding: 10px; /* Add padding to list items */
         }
         nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-size: 18px;
-            display: block;
-            transition: color 0.3s ease;
+            color: white; /* Set link color to white */
+            text-decoration: none; /* Remove default underline */
+            font-size: 18px; /* Set font size */
+            display: block; /* Make links block elements */
+            transition: color 0.3s ease; /* Smooth transition for color */
         }
         nav ul li a:hover {
-            color: #95a5a6;
+            color: #95a5a6; /* Change link color on hover */
         }
 
         /* Hero Section */
         .hero {
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            text-align: center;
-            padding: 20px;
-            box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.5);
+            height: 100vh; /* Full viewport height */
+            display: flex; /* Use flexbox for layout */
+            justify-content: center; /* Center content horizontally */
+            align-items: center; /* Center content vertically */
+            flex-direction: column; /* Stack content vertically */
+            text-align: center; /* Center-align text */
+            padding: 20px; /* Add padding */
+            box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.5); /* Add shadow for depth */
         }
         .hero h1 {
-            font-size: 50px;
-            margin: 10px 0;
-            animation: fadeInDown 1s;
+            font-size: 50px; /* Set font size */
+            margin: 10px 0; /* Add margin */
+            animation: fadeInDown 1s; /* Fade-in animation */
         }
         .hero p {
-            font-size: 20px;
-            margin-bottom: 20px;
-            animation: fadeInUp 1s;
+            font-size: 20px; /* Set font size */
+            margin-bottom: 20px; /* Add margin to the bottom */
+            animation: fadeInUp 1s; /* Fade-in animation */
         }
         .cta-button {
-            background: #e74c3c;
-            color: white;
-            padding: 15px 30px;
-            text-decoration: none;
-            font-size: 20px;
-            border-radius: 5px;
-            transition: background 0.3s, transform 0.2s;
-            animation: fadeIn 2s;
+            background: #e74c3c; /* Set background color */
+            color: white; /* Set text color to white */
+            padding: 15px 30px; /* Add padding */
+            text-decoration: none; /* Remove default underline */
+            font-size: 20px; /* Set font size */
+            border-radius: 5px; /* Rounded corners */
+            transition: background 0.3s, transform 0.2s; /* Smooth transition for background and transform */
+            animation: fadeIn 2s; /* Fade-in animation */
         }
         .cta-button:hover {
-            background: #c0392b;
-            transform: scale(1.05);
+            background: #c0392b; /* Change background on hover */
+            transform: scale(1.05); /* Slightly enlarge button on hover */
         }
 
         @keyframes fadeInDown {
             from {
-                opacity: 0;
-                transform: translateY(-20px);
+                opacity: 0; /* Start with 0 opacity */
+                transform: translateY(-20px); /* Start 20px above */
             }
             to {
-                opacity: 1;
-                transform: translateY(0);
+                opacity: 1; /* End with full opacity */
+                transform: translateY(0); /* End at original position */
             }
         }
 
         @keyframes fadeInUp {
             from {
-                opacity: 0;
-                transform: translateY(20px);
+                opacity: 0; /* Start with 0 opacity */
+                transform: translateY(20px); /* Start 20px below */
             }
             to {
-                opacity: 1;
-                transform: translateY(0);
+                opacity: 1; /* End with full opacity */
+                transform: translateY(0); /* End at original position */
             }
         }
 
         @keyframes fadeIn {
             from {
-                opacity: 0;
+                opacity: 0; /* Start with 0 opacity */
             }
             to {
-                opacity: 1;
+                opacity: 1; /* End with full opacity */
             }
         }
 
         /* AI Usage and Contributions Section */
         .ai-section {
-            padding: 60px 20px;
-            background: rgba(0, 0, 0, 0.8);
-            margin-top: 40px;
-            border-top: 5px solid #e74c3c;
+            padding: 60px 20px; /* Add padding */
+            background: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+            margin-top: 40px; /* Add margin to the top */
+            border-top: 5px solid #e74c3c; /* Add top border */
         }
         .ai-section h2 {
-            font-size: 36px;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            font-size: 36px; /* Set font size */
+            margin-bottom: 20px; /* Add margin to the bottom */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add text shadow */
         }
         .ai-section p {
-            font-size: 20px;
-            margin-bottom: 30px;
+            font-size: 20px; /* Set font size */
+            margin-bottom: 30px; /* Add margin to the bottom */
         }
         .ai-list {
-            list-style: none;
-            padding: 0;
-            margin: 0 auto;
-            max-width: 600px;
-            text-align: left;
+            list-style: none; /* Remove default list style */
+            padding: 0; /* Remove default padding */
+            margin: 0 auto; /* Center the list */
+            max-width: 600px; /* Maximum width */
+            text-align: left; /* Left-align text */
         }
         .ai-list li {
-            font-size: 20px;
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-            padding: 10px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 5px;
-            transition: background 0.3s;
+            font-size: 20px; /* Set font size */
+            margin-bottom: 15px; /* Add margin to the bottom */
+            display: flex; /* Use flexbox for layout */
+            align-items: center; /* Align items vertically */
+            padding: 10px; /* Add padding */
+            background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+            border-radius: 5px; /* Rounded corners */
+            transition: background 0.3s; /* Smooth transition for background */
         }
         .ai-list li:hover {
-            background: rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.2); /* Change background on hover */
         }
         .ai-list li img {
-            width: 24px;
-            height: 24px;
-            margin-right: 10px;
+            width: 24px; /* Set the width of the image */
+            height: 24px; /* Set the height of the image */
+            margin-right: 10px; /* Add margin to the right of the image */
         }
 
         /* Footer Section */
         footer {
-            background: rgba(0, 0, 0, 0.8);
-            padding: 20px;
-            text-align: center;
-            color: white;
-            margin-top: auto;
-            width: 100%;
+            background: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+            padding: 20px; /* Add padding */
+            text-align: center; /* Center-align text */
+            color: white; /* Set text color to white */
+            margin-top: auto; /* Push footer to the bottom */
+            width: 100%; /* Full width */
         }
         .footer-links a {
-            color: #95a5a6;
-            text-decoration: none;
-            margin: 0 10px;
+            color: #95a5a6; /* Set link color */
+            text-decoration: none; /* Remove default underline */
+            margin: 0 10px; /* Add margin */
         }
         .footer-links a:hover {
-            text-decoration: underline;
+            text-decoration: underline; /* Underline on hover */
         }
     </style>
     <script>
@@ -232,14 +238,19 @@
     </script>
 </head>
 <body>
+    <!-- Header section containing the logo and navigation menu -->
     <header>
         <div class="logo">
+            <!-- Link to the homepage with the logo image -->
             <a href="index.html"><img src="logo.png" alt="Portfolio Logo"></a>
-             <a href="index.html" style="text-decoration:none;color:White">Jacob Winter</a>
+            <!-- Link to the homepage with the text "Jacob Winter" -->
+            <a href="index.html" style="text-decoration:none;color:White">Jacob Winter</a>
         </div>
+        <!-- Hamburger icon for toggling the navigation menu -->
         <div class="hamburger" onclick="toggleMenu()">
             &#9776;
         </div>
+        <!-- Navigation menu -->
         <nav id="nav-menu">
             <ul>
                 <li><a href="index.html">Homepage</a></li>
@@ -255,12 +266,14 @@
     </header>
 
     <div class="wrapper">
+        <!-- Hero section with main content -->
         <section class="hero">
             <h1>My AI Integration</h1>
             <p>Discover how AI has shaped and enhanced my portfolio.</p>
             <a href="#ai-usage" class="cta-button">Learn More</a>
         </section>
 
+        <!-- AI Usage and Contributions Section -->
         <section class="ai-section" id="ai-usage">
             <h2>AI Usage and Contributions</h2>
             <p>My portfolio incorporates AI-driven insights and automation in the following ways:</p>
@@ -274,11 +287,15 @@
         </section>
     </div>
 
+    <!-- Footer section with contact links -->
     <footer>
         <p>&copy; 2025 Jacob's Portfolio. All rights reserved.</p>
         <div class="footer-links">
+            <!-- Email link -->
             <a href="mailto:jfw001@lvc.edu"><i class="fas fa-envelope"></i> Email</a>
+            <!-- LinkedIn profile link -->
             <a href="https://www.linkedin.com/in/jacob-winter-52a160263/"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            <!-- Facebook profile link -->
             <a href="https://www.facebook.com/jacob.winter.33671"><i class="fab fa-facebook"></i> Facebook</a>
         </div>
     </footer>
