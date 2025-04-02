@@ -1,18 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Set the character encoding for the document to UTF-8 -->
     <meta charset="UTF-8">
+    <!-- Set the viewport to make the website responsive on all devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Define the title of the webpage, which appears in the browser tab -->
     <title>Programming & User Experience - Portfolio</title>
+    <!-- Link to the external stylesheet for custom styles -->
     <link rel="stylesheet" href="styles.css">
+    <!-- Link to Google Fonts for the 'Roboto' font family -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Link to Font Awesome library for icons -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <script defer>
+        // Function to toggle the visibility of the navigation menu
         function toggleMenu() {
             var menu = document.getElementById("nav-menu");
             menu.classList.toggle("active");
         }
 
+        // Event listener to close the menu if clicked outside of it
         document.addEventListener("click", function(event) {
             var menu = document.getElementById("nav-menu");
             var hamburger = document.querySelector(".hamburger");
@@ -22,181 +30,218 @@
         });
     </script>
     <style>
+        /* General styles for the entire body */
         body {
-            margin: 0;
-            font-family: 'Roboto', sans-serif;
-            background: linear-gradient(45deg, #2c3e50, #3a506b, #5c677d, #3498db);
-            color: #fff;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
+            margin: 0; /* Remove default margin */
+            font-family: 'Roboto', sans-serif; /* Set the font family */
+            background: linear-gradient(45deg, #2c3e50, #3a506b, #5c677d, #3498db); /* Gradient background */
+            color: #fff; /* Set the text color to white */
+            text-align: center; /* Center-align the text */
+            display: flex; /* Use flexbox for layout */
+            flex-direction: column; /* Stack content vertically */
+            min-height: 100vh; /* Minimum height of the viewport */
         }
+
+        /* Header styles */
         header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 20px;
-            background: rgba(0, 0, 0, 0.7);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            left: 0;
-            z-index: 1000;
+            display: flex; /* Use flexbox for layout */
+            justify-content: space-between; /* Space out the elements */
+            align-items: center; /* Align items vertically */
+            padding: 15px 20px; /* Add padding */
+            background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+            position: fixed; /* Fix the header at the top */
+            width: 100%; /* Full width */
+            top: 0; /* Align to the top */
+            left: 0; /* Align to the left */
+            z-index: 1000; /* Ensure the header is above other elements */
         }
+
         .logo {
-            font-size: 24px;
-            font-weight: bold;
-            display: flex;
-            align-items: center;
+            font-size: 24px; /* Font size for the logo */
+            font-weight: bold; /* Bold font */
+            display: flex; /* Use flexbox for layout */
+            align-items: center; /* Align items vertically */
         }
+
         .logo img {
-            width: 40px;
-            height: 40px;
-            margin-right: 10px;
+            width: 40px; /* Set the width of the logo image */
+            height: 40px; /* Set the height of the logo image */
+            margin-right: 10px; /* Add margin to the right of the image */
         }
+
         .hamburger {
-            font-size: 30px;
-            cursor: pointer;
-            padding: 10px;
-            background: rgba(255, 255, 255, 0.2);
-            border-radius: 5px;
-            transition: background 0.3s;
-            z-index: 1100;
+            font-size: 30px; /* Font size for the hamburger icon */
+            cursor: pointer; /* Change cursor to pointer on hover */
+            padding: 10px; /* Add padding */
+            background: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+            border-radius: 5px; /* Rounded corners */
+            transition: background 0.3s; /* Smooth transition for background change */
+            z-index: 1100; /* Ensure the hamburger icon is above other elements */
         }
+
         .hamburger:hover {
-            background: rgba(255, 255, 255, 0.4);
+            background: rgba(255, 255, 255, 0.4); /* Change background on hover */
         }
+
         nav {
-            position: fixed;
-            top: 60px;
-            right: 0;
-            width: 250px;
-            background: rgba(0, 0, 0, 0.9);
-            text-align: left;
-            border-radius: 5px;
-            padding: 10px;
-            display: none;
-            transition: transform 0.3s ease-in-out;
-            transform: translateX(100%);
-            z-index: 1000;
+            position: fixed; /* Position the nav elements fixed */
+            top: 60px; /* Position below the header */
+            right: 0; /* Align to the right */
+            width: 250px; /* Set the width */
+            background: rgba(0, 0, 0, 0.9); /* Semi-transparent background */
+            text-align: left; /* Align text to the left */
+            border-radius: 5px; /* Rounded corners */
+            padding: 10px; /* Add padding */
+            display: none; /* Hide the nav by default */
+            transition: transform 0.3s ease-in-out; /* Smooth transition for transform */
+            transform: translateX(100%); /* Initially hide the nav off-screen */
+            z-index: 1000; /* Ensure the nav is above other elements */
         }
+
         nav.active {
-            display: block;
-            transform: translateX(0);
+            display: block; /* Display the nav when active */
+            transform: translateX(0); /* Move the nav into view */
         }
+
         nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
+            list-style: none; /* Remove default list style */
+            padding: 0; /* Remove default padding */
+            margin: 0; /* Remove default margin */
         }
+
         nav ul li {
-            padding: 10px;
+            padding: 10px; /* Add padding to list items */
         }
+
         nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-size: 18px;
-            display: block;
-            transition: color 0.3s ease, transform 0.3s ease;
+            color: white; /* Set link color to white */
+            text-decoration: none; /* Remove default underline */
+            font-size: 18px; /* Set font size */
+            display: block; /* Make links block elements */
+            transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for color and transform */
         }
+
         nav ul li a:hover {
-            color: #95a5a6;
-            transform: scale(1.05);
+            color: #95a5a6; /* Change link color on hover */
+            transform: scale(1.05); /* Slightly enlarge link on hover */
         }
+
+        /* Styles for the main content section */
         .content {
-            padding: 100px 20px 40px;
-            max-width: 800px;
-            margin: auto;
-            flex: 1;
-            animation: fadeInUp 1s ease-in-out;
+            padding: 100px 20px 40px; /* Add padding */
+            max-width: 800px; /* Maximum width of the content */
+            margin: auto; /* Center the content */
+            flex: 1; /* Allow the content to grow */
+            animation: fadeInUp 1s ease-in-out; /* Fade-in animation */
         }
+
         .content h1 {
-            font-size: 36px;
-            margin-bottom: 20px;
+            font-size: 36px; /* Set font size for the heading */
+            margin-bottom: 20px; /* Add margin to the bottom */
         }
+
         .content p {
-            font-size: 20px;
-            line-height: 1.6;
+            font-size: 20px; /* Set font size for paragraphs */
+            line-height: 1.6; /* Set line height */
         }
+
+        /* Styles for various sections within the content */
         .projects, .marketing-strategy, .gallery {
-            margin-top: 40px;
-            text-align: center;
-            padding: 40px 20px;
-            animation: fadeInUp 1s ease-in-out;
+            margin-top: 40px; /* Add margin to the top */
+            text-align: center; /* Center-align text */
+            padding: 40px 20px; /* Add padding */
+            animation: fadeInUp 1s ease-in-out; /* Fade-in animation */
         }
+
         .projects h2, .marketing-strategy h2, .gallery h2 {
-            font-size: 28px;
-            margin-bottom: 15px;
+            font-size: 28px; /* Set font size for subheadings */
+            margin-bottom: 15px; /* Add margin to the bottom */
         }
+
+        /* Styles for the project grid */
         .project-grid, .gallery-grid {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
+            display: flex; /* Use flexbox for layout */
+            flex-wrap: wrap; /* Wrap the items */
+            justify-content: center; /* Center-align items */
+            gap: 20px; /* Add gap between items */
         }
+
         .project-item, .gallery-grid img {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 15px;
-            border-radius: 5px;
-            width: 250px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+            padding: 15px; /* Add padding */
+            border-radius: 5px; /* Rounded corners */
+            width: 250px; /* Set the width */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
         }
+
         .project-item img, .gallery-grid img {
-            width: 100%;
-            border-radius: 5px;
+            width: 100%; /* Full width */
+            border-radius: 5px; /* Rounded corners */
         }
+
+        /* Styles for call-to-action buttons */
         .cta-button {
-            display: inline-block;
-            margin-top: 10px;
-            padding: 8px 15px;
-            background: linear-gradient(45deg, #3498db, #2980b9);
-            color: white;
-            text-decoration: none;
-            font-size: 20px;
-            border-radius: 5px;
-            transition: background 0.3s, transform 0.2s;
+            display: inline-block; /* Inline-block element */
+            margin-top: 10px; /* Add margin to the top */
+            padding: 8px 15px; /* Add padding */
+            background: linear-gradient(45deg, #3498db, #2980b9); /* Gradient background */
+            color: white; /* Set text color to white */
+            text-decoration: none; /* Remove default underline */
+            font-size: 20px; /* Set font size */
+            border-radius: 5px; /* Rounded corners */
+            transition: background 0.3s, transform 0.2s; /* Smooth transition for background and transform */
         }
+
         .cta-button:hover {
-            background: #2980b9;
-            transform: scale(1.05);
+            background: #2980b9; /* Change background on hover */
+            transform: scale(1.05); /* Slightly enlarge button on hover */
         }
+
+        /* Footer styles */
         footer {
-            background: rgba(0, 0, 0, 0.8);
-            padding: 20px;
-            text-align: center;
-            color: white;
-            margin-top: auto;
+            background: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+            padding: 20px; /* Add padding */
+            text-align: center; /* Center-align text */
+            color: white; /* Set text color to white */
+            margin-top: auto; /* Push footer to the bottom */
         }
+
         .footer-links a {
-            color: #95a5a6;
-            text-decoration: none;
-            margin: 0 10px;
+            color: #95a5a6; /* Set link color */
+            text-decoration: none; /* Remove default underline */
+            margin: 0 10px; /* Add margin */
         }
+
         .footer-links a:hover {
-            text-decoration: underline;
+            text-decoration: underline; /* Underline on hover */
         }
+
         @keyframes fadeInUp {
             0% {
-                opacity: 0;
-                transform: translateY(20px);
+                opacity: 0; /* Start with 0 opacity */
+                transform: translateY(20px); /* Start 20px below */
             }
             100% {
-                opacity: 1;
-                transform: translateY(0);
+                opacity: 1; /* End with full opacity */
+                transform: translateY(0); /* End at original position */
             }
         }
     </style>
 </head>
 <body>
+    <!-- Header section containing the logo and navigation menu -->
     <header>
         <div class="logo">
+            <!-- Link to the homepage with the logo image -->
             <a href="index.html"><img src="logo.png" alt="Portfolio Logo"></a>
-             <a href="index.html" style="text-decoration:none;color:White">Jacob Winter</a>
+            <!-- Link to the homepage with the text "Jacob Winter" -->
+            <a href="index.html" style="text-decoration:none;color:White">Jacob Winter</a>
         </div>
+        <!-- Hamburger icon for toggling the navigation menu -->
         <div class="hamburger" onclick="toggleMenu()">
             &#9776;
         </div>
+        <!-- Navigation menu -->
         <nav id="nav-menu">
             <ul>
                 <li><a href="index.html">Homepage</a></li>
@@ -210,36 +255,48 @@
             </ul>
         </nav>
     </header>
+
+    <!-- Main content section -->
     <section class="content">
         <h1>Programming & User Experience</h1>
         <div class="centered-container">
             <div class="container">
-                <p>Bridging functionality and usability, our programming and user experience work focuses on building intuitive, human-centered digital solutions. From front-end development to interactive prototypes, each project demonstrates a commitment to high-quality, user-friendly design.</p>
+                <!-- Description of the programming and user experience section -->
+                <p>Bridging functionality and usability, our programming and user experience work focuses on building intuitive, human-centered digital solutions. From front-end development to interactive prototypes, we aim to enhance the user experience through thoughtful design and efficient coding practices.</p>
             </div>
         </div>
+
+        <!-- Programming and UX projects section -->
         <div class="projects">
             <h2>Programming & UX Projects</h2>
             <div class="project-grid">
+                <!-- Individual project item -->
                 <div class="project-item">
-                    <img src="Library/ProgrammingCover.png" alt="Project 2">
+                    <img src="Library/ProgrammingCover.png" alt="Project 1">
                     <h3>Website Programming</h3>
-                    <p>This project demonstrates my foundational skills in front-end web development, including semantic HTML structure, responsive design, and custom styling with CSS. It reflects a comprehensive understanding of how to build user-friendly web interfaces from scratch.</p>
+                    <p>This project demonstrates my foundational skills in front-end web development, including semantic HTML structure, responsive design, and custom styling with CSS. It reflects my ability to create clean and efficient code for user-friendly websites.</p>
                     <a href="Library/ProgrammingMidterm.html" class="cta-button" target="_blank">View Project</a>
                 </div>
+                <!-- Individual project item -->
                 <div class="project-item">
                     <img src="Library/PrototypeCover.png" alt="Project 2">
                     <h3>Usability and Design</h3>
-                    <p>This project explores core principles of user-centered design, focusing on accessibility, clarity, and intuitive interface layout. Using Figma, I applied foundational design principles to create prototypes that prioritize user experience.</p>
+                    <p>This project explores core principles of user-centered design, focusing on accessibility, clarity, and intuitive interface layout. Using Figma, I applied foundational design principles to create prototypes that prioritize the user experience.</p>
                     <a href="https://www.figma.com/design/6la9DxBODoMiZRdz5xrz46/Usability-and-Design-Final?node-id=0-1&t=R0k5fsnpUodo7YKD-1" class="cta-button" target="_blank">View Project</a>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Footer section with contact links -->
     <footer>
         <p>&copy; 2025 Jacob's Portfolio. All rights reserved.</p>
         <div class="footer-links">
+            <!-- Email link -->
             <a href="mailto:jfw001@lvc.edu"><i class="fas fa-envelope"></i> Email</a>
+            <!-- LinkedIn profile link -->
             <a href="https://www.linkedin.com/in/jacob-winter-52a160263/"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            <!-- Facebook profile link -->
             <a href="https://www.facebook.com/jacob.winter.33671"><i class="fab fa-facebook"></i> Facebook</a>
         </div>
     </footer>
