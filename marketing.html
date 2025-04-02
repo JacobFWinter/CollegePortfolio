@@ -22,13 +22,14 @@
     <style>
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
-            background: radial-gradient(circle, #2c3e50, #3a506b, #5c677d);
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #2c3e50, #3a506b, #5c677d);
             color: #fff;
             text-align: center;
             display: flex;
             flex-direction: column;
             min-height: 100vh;
+            line-height: 1.6;
         }
         header {
             display: flex;
@@ -41,6 +42,7 @@
             top: 0;
             left: 0;
             z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
         .logo {
             font-size: 24px;
@@ -107,10 +109,8 @@
             align-items: center;
             min-height: 20vh;
         }
-
         p, li {
             text-align: left;
-            line-height: 1.6;
         }
         .content {
             padding: 100px 20px 40px;
@@ -132,6 +132,7 @@
             padding: 15px;
             border-radius: 5px;
             width: 250px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
         .project-item img {
             width: 100%;
@@ -160,14 +161,15 @@
             width: 200px;
             height: auto;
             border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
-
         footer {
             background: rgba(0, 0, 0, 0.8);
             padding: 20px;
             text-align: center;
             color: white;
             margin-top: auto;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
         }
         .footer-links a {
             color: #95a5a6;
@@ -177,14 +179,12 @@
         .footer-links a:hover {
             text-decoration: underline;
         }
-
-
     </style>
 </head>
 <body>
     <header>
         <div class="logo">
-           <a href= "index.html"><img src="logo.png" alt="Portfolio Logo"> </a>
+            <a href="index.html"><img src="logo.png" alt="Portfolio Logo"></a>
             Jacob Winter
         </div>
         <div class="hamburger" onclick="toggleMenu()">
@@ -204,59 +204,56 @@
         </nav>
     </header>
     <section class="content">
-         <div class="centered-container">
+        <div class="centered-container">
             <div class="container">
-        <h1>Marketing & Business Technology</h1>
-        <p>This section highlights my academic and practical experience in digital communications and strategic marketing. Featured here are projects that show my capabilities in app development, comprehensive marketing plan creation, brand repositioning strategy, and the formulation of an individual marketing plan. Each piece reflects a thoughtful integration of digital tools, analytical thinking, and creative problem-solving, designed to meet real-world marketing challenges and align with contemporary communication principles. </p>
+                <h1>Marketing & Business Technology</h1>
+                <p>This section highlights my academic and practical experience in digital communications and strategic marketing. Featured here are projects that show my capabilities in app development, strategic planning, and more.</p>
             </div>
-         </div>
+        </div>
         <div class="projects">
             <h2>Marketing Projects</h2>
             <div class="project-grid">
                 <div class="project-item">
-                    <img src= "Library/MarketingPlanTitlePage.png" alt="Project 1">
+                    <img src="Library/MarketingPlanTitlePage.png" alt="Project 1">
                     <h3>Individual Marketing Plan</h3>
-                    <p>Went through a series of self-evaluation creating an Individual Marketing Plan, to sell myself and plan my future, going over SWOT Analysis, Situational Analysis, Objectives & Goals, and Startegized Planning to create a designated plan for the future.</p>
+                    <p>Went through a series of self-evaluation creating an Individual Marketing Plan, to sell myself and plan my future, going over SWOT Analysis, Situational Analysis, Objectives, and more.</p>
                     <a href="Library/IndividualMarketingPlan.pdf" class="cta-button" target="_blank">View Project</a>
                 </div>
                 <div class="project-item">
-                    <img src= "Library/StrategicMarketing.png" alt="Project 2">
+                    <img src="Library/StrategicMarketing.png" alt="Project 2">
                     <h3>Marketing Plan Development</h3>
-                    <p>MBA-816 Internet Marketing, was a development of a Marketing Plan that included, Target Market, Market Analysis and Research, SWOT Analysis, and the Creation of a measures of success. </p>
-                    <a href= "Library/MarketingPlanDevelopment.pdf" class="cta-button" target="_blank">View Project</a>
+                    <p>MBA-816 Internet Marketing, was a development of a Marketing Plan that included Target Market, Market Analysis and Research, SWOT Analysis, and the Creation of a measures and metrics plan.</p>
+                    <a href="Library/MarketingPlanDevelopment.pdf" class="cta-button" target="_blank">View Project</a>
                 </div>
                 <div class="project-item">
-                    <img src= "Library/BelperPlan.png" alt="Project 2">
+                    <img src="Library/BelperPlan.png" alt="Project 2">
                     <h3>App Development</h3>
-                    <p>App Development Project for DCOM Capstone that displays Teamwork and Collaborative skills to finish a Development Plan, Prototype, and Market Analyzation Concept. This collabarative work is a foundation of the final capstone Prototype that will be complete by the end of the year.</p>
+                    <p>App Development Project for DCOM Capstone that displays Teamwork and Collaborative skills to finish a Development Plan, Prototype, and Market Analyzation Concept. This collaborative effort resulted in a comprehensive app development plan.</p>
                     <a href="Library/AppDevelopment.pdf" class="cta-button" target="_blank">View Project</a>
                 </div>
                 <div class="project-item">
-                    <img src= "Library/AppleRepositioningPlan.png" alt="Project 2">
+                    <img src="Library/AppleRepositioningPlan.png" alt="Project 2">
                     <h3>Repositioning Plan Development</h3>
-                    <p>Repositioning plan on a Collabarative team project that displays the ability to conduct market research, Risks Involved and Risk Management. This project also goes over work covering Product, Place, Price, and Promotion.</p>
-                    <a href= "Library/RepositioningPlan.pdf" class="cta-button" target="_blank">View Project</a>
+                    <p>Repositioning plan on a Collaborative team project that displays the ability to conduct market research, Risks Involved, and Risk Management. This project also goes over working in a team to reposition a product in the market.</p>
+                    <a href="Library/RepositioningPlan.pdf" class="cta-button" target="_blank">View Project</a>
                 </div>
             </div>
         </div>
-
         <div class="case-study">
-             <div class="centered-container">
-            <div class="container">
-            <h2>Collective Series of DAE's Conducted</h2>
-            <p>Several basic Case Study's were conducted to gain information on the Marketing field, and stay up to date with business changes and objectives. This was to engage, learn, and practice our Evaluation and Analyzation skills on real-time events and companies.</p>
-            <ul>
-                <li>📊 Evaluated 7 Different Companies and World Events</li>
-                <li>📢 Analyzed and Conducted and Opinionated Change and Recommendation</li>
-                <li>📈 Evaluate the effects on before and after market affairs, for certain case studies.</li>
-            </ul>
-            <a href= "Library/CaseStudiesDocument.pdf" class="cta-button" target="_blank">Read Full Case Study</a>
+            <div class="centered-container">
+                <div class="container">
+                    <h2>Collective Series of DAE's Conducted</h2>
+                    <p>Several basic Case Studies were conducted to gain information on the Marketing field, and stay up to date with business changes and objectives. This was to engage, learn, and practice marketing strategies.</p>
+                    <ul>
+                        <li>📊 Evaluated 7 Different Companies and World Events</li>
+                        <li>📢 Analyzed and Conducted and Opinionated Change and Recommendation</li>
+                        <li>📈 Evaluate the effects on before and after market affairs, for certain case studies.</li>
+                    </ul>
+                    <a href="Library/CaseStudiesDocument.pdf" class="cta-button" target="_blank">Read Full Case Study</a>
+                </div>
+            </div>
         </div>
-             </div>
-        </div>
-
     </section>
-
     <footer>
         <p>&copy; 2025 Jacob's Portfolio. All rights reserved.</p>
         <div class="footer-links">
