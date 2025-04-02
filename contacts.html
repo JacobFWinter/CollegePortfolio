@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacts - Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <script defer>
         function toggleMenu() {
             var menu = document.getElementById("nav-menu");
@@ -20,23 +21,16 @@
         });
     </script>
     <style>
-        /* General Styles */
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
-            background: radial-gradient(circle, #2c3e50, #3a506b, #5c677d);
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(45deg, #2c3e50, #3a506b, #5c677d, #3498db);
             color: #fff;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
             text-align: center;
         }
-        
-                body2 {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f0f0f0;
-        }
-        /* Header Styles */
         header {
             display: flex;
             justify-content: space-between;
@@ -67,12 +61,13 @@
             background: rgba(255, 255, 255, 0.2);
             border-radius: 5px;
             transition: background 0.3s;
+            z-index: 1100;
         }
         .hamburger:hover {
             background: rgba(255, 255, 255, 0.4);
         }
         nav {
-            position: absolute;
+            position: fixed;
             top: 60px;
             right: 0;
             width: 250px;
@@ -81,10 +76,13 @@
             border-radius: 5px;
             padding: 10px;
             display: none;
-            transition: all 0.3s ease;
+            transition: transform 0.3s ease-in-out;
+            transform: translateX(100%);
+            z-index: 1000;
         }
         nav.active {
             display: block;
+            transform: translateX(0);
         }
         nav ul {
             list-style: none;
@@ -99,13 +97,19 @@
             text-decoration: none;
             font-size: 18px;
             display: block;
-            transition: color 0.3s ease;
+            transition: color 0.3s ease, transform 0.3s ease;
         }
         nav ul li a:hover {
             color: #95a5a6;
+            transform: scale(1.05);
         }
-        
-        /* Hero Section */
+        .content {
+            padding: 100px 20px 40px;
+            max-width: 800px;
+            margin: auto;
+            flex: 1;
+            animation: fadeInUp 1s ease-in-out;
+        }
         .hero {
             height: 100vh;
             display: flex;
@@ -124,7 +128,7 @@
             margin-bottom: 20px;
         }
         .cta-button {
-            background: #2c3e50;
+            background: linear-gradient(45deg, #3498db, #2980b9);
             color: white;
             padding: 10px 20px;
             text-decoration: none;
@@ -133,33 +137,36 @@
             transition: background 0.3s, transform 0.2s;
         }
         .cta-button:hover {
-            background: #34495e;
+            background: #2980b9;
             transform: scale(1.05);
         }
-                .contact-card {
-            background: white;
+        .contact-card {
+            background: rgba(255, 255, 255, 0.1);
             padding: 20px;
             border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             text-align: center;
             width: 300px;
+            margin: auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
         .contact-card h2 {
             margin: 0 0 10px;
-            color: #333;
+            color: #fff;
         }
         .contact-card p {
             margin: 5px 0;
-            color: #666;
+            color: #fff;
         }
         .contact-card a {
-            color: #0077B5;
+            color: #3498db;
             text-decoration: none;
             font-weight: bold;
         }
         .social-buttons {
             display: flex;
+            justify-content: center;
             gap: 15px;
+            padding: 20px 0;
         }
         .social-button {
             display: flex;
@@ -181,14 +188,12 @@
         .twitter:hover { background-color: #1DA1F2; }
         .instagram:hover { background-color: #E1306C; }
         .linkedin:hover { background-color: #0077B5; }
-
-        /* Footer Section */
         footer {
             background: rgba(0, 0, 0, 0.8);
             padding: 20px;
             text-align: center;
             color: white;
-            margin-top: 40px;
+            margin-top: auto;
         }
         .footer-links a {
             color: #95a5a6;
@@ -198,67 +203,23 @@
         .footer-links a:hover {
             text-decoration: underline;
         }
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
     </style>
 </head>
 <body>
     <header>
         <div class="logo">
-           <a href= "index.html"><img src="logo.png" alt="Portfolio Logo"> </a>
+            <a href="index.html"><img src="logo.png" alt="Portfolio Logo"></a>
             Jacob's Portfolio
         </div>
         <div class="hamburger" onclick="toggleMenu()">
-            &#9776;
-        </div>
-        <nav id="nav-menu">
-            <ul>
-                <li><a href="index.html">Homepage</a></li>
-                <li><a href="information.html">Information</a></li>
-                <li><a href="marketing.html">Marketing & Business Technology</a></li>
-                <li><a href="design.html">Design & Videography</a></li>
-                <li><a href="communications.html">Communications</a></li>
-                <li><a href="progandux.html">Programming & User Experience</a></li>
-                <li><a href="contacts.html">Contact Me</a></li>
-                <li><a href="aiusage.html">AI Usage</a></li>
-            </ul>
-        </nav>
-    </header>
-</body>
-
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Contact me!</h1>
-            <p>Interested in collaborating or have questions about my work? Feel free to reach out — I'd love to connect!</p>
-        </div>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-
-            <div class="contact-card">
-        <h2>Jacob Winter</h2>
-        <p>Email: <a href="mailto:jfw001@lvc.edu">jfw001@lvc.edu</a></p>
-        <p>Phone: <a href="tel:+16166020585">+1 (717) 602-0585</a></p>
-        <p>Location: Mechanicsburg, Pennsylvania, USA</p>
-    </div>
-    <br>
-        <div class="social-buttons">
-        <a href="https://facebook.com" class="social-button facebook" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
-        <a href="https://instagram.com" class="social-button instagram" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-        <a href="https://linkedin.com" class="social-button linkedin" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
-    </div>
-    </section>
-
-
-
-
-    <footer>
-        <p>&copy; 2025 Jacob's Portfolio. All rights reserved.</p>
-        <div class="footer-links">
-            <a href="mailto:jfw001@lvc.edu">Email</a>
-            <a href="https://www.linkedin.com/in/jacob-winter-52a160263/">LinkedIn</a>
-            <a href="https://www.facebook.com/jacob.winter.33671">Facebook</a>
-        </div>
-    </footer>
-</body>
-</html>
+            &#9776 ▋
