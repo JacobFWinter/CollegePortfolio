@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Metadata and links to external resources -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homepage - Portfolio</title>
+    <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- AOS for animations -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <!-- Link to external stylesheet -->
     <link rel="stylesheet" href="styles.css">
     <style>
         /* General Styles */
-/*Image Section in Body Aided by AI Debugging due to Responsiveness and Reaction Glitching/Bugs  */
         body {
             margin: 0;
             font-family: 'Roboto', sans-serif;
@@ -177,11 +180,13 @@
         }
     </style>
     <script defer>
+        // Function to toggle the menu visibility
         function toggleMenu() {
             var menu = document.getElementById("nav-menu");
             menu.classList.toggle("active");
         }
 
+        // Close the menu if clicked outside
         document.addEventListener("click", function(event) {
             var menu = document.getElementById("nav-menu");
             var hamburger = document.querySelector(".hamburger");
@@ -190,16 +195,18 @@
             }
         });
 
+        // Add 'visible' class to elements with 'fade-in' class on page load
         document.addEventListener('DOMContentLoaded', function() {
             document.querySelector('.fade-in').classList.add('visible');
         });
     </script>
 </head>
 <body>
+    <!-- Header section with logo and navigation menu -->
     <header>
         <div class="logo">
             <a href="index.html"><img src="logo.png" alt="Portfolio Logo"></a>
-             <a href="index.html" style="text-decoration:none;color:White">Jacob Winter</a>
+            <a href="index.html" style="text-decoration:none;color:White">Jacob Winter</a>
         </div>
         <div class="hamburger" onclick="toggleMenu()">
             &#9776;
@@ -218,6 +225,7 @@
         </nav>
     </header>
 
+    <!-- Hero section with main content -->
     <section class="hero">
         <div class="hero-content" data-aos="fade-up">
             <h1>Jacob Winter | Business Technology</h1>
@@ -226,6 +234,7 @@
         </div>
     </section>
 
+    <!-- Footer section with contact links -->
     <footer>
         <p>&copy; 2025 Jacob's Portfolio. All rights reserved.</p>
         <div class="footer-links">
@@ -235,6 +244,7 @@
         </div>
     </footer>
 
+    <!-- AOS animation script -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
         AOS.init();
