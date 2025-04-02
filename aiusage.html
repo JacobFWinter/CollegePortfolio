@@ -3,22 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ai Usage - Portfolio</title>
+    <title>AI Usage - Portfolio</title>
     <link rel="stylesheet" href="styles.css">
-    <script defer>
-        function toggleMenu() {
-            var menu = document.getElementById("nav-menu");
-            menu.classList.toggle("active");
-        }
-
-        document.addEventListener("click", function(event) {
-            var menu = document.getElementById("nav-menu");
-            var hamburger = document.querySelector(".hamburger");
-            if (!hamburger.contains(event.target) && !menu.contains(event.target)) {
-                menu.classList.remove("active");
-            }
-        });
-    </script>
+    <script defer src="scripts.js"></script>
     <style>
         /* General Styles */
         html, body {
@@ -32,7 +19,7 @@
             flex-direction: column;
         }
 
-        /* Make sure the wrapper grows to push the footer down */
+        /* Wrapper to push footer down */
         .wrapper {
             flex: 1;
             display: flex;
@@ -43,7 +30,6 @@
         header {
             display: flex;
             justify-content: space-between;
-            gap: 60%;
             align-items: center;
             padding: 15px 20px;
             background: rgba(0, 0, 0, 0.7);
@@ -108,7 +94,7 @@
         nav ul li a:hover {
             color: #95a5a6;
         }
-        
+
         /* Hero Section */
         .hero {
             height: 100vh;
@@ -149,6 +135,7 @@
         }
         .ai-section h2 {
             font-size: 32px;
+            margin-bottom: 20px;
         }
         .ai-section p {
             font-size: 18px;
@@ -164,6 +151,13 @@
         .ai-list li {
             font-size: 18px;
             margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        .ai-list li img {
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
         }
 
         /* Footer Section */
@@ -188,7 +182,7 @@
 <body>
     <header>
         <div class="logo">
-           <a href= "index.html"><img src="logo.png" alt="Portfolio Logo"> </a>
+            <a href="index.html"><img src="logo.png" alt="Portfolio Logo"></a>
             Jacob Winter
         </div>
         <div class="hamburger" onclick="toggleMenu()">
@@ -208,22 +202,22 @@
         </nav>
     </header>
 
-<br>
-<br>
-<br>
-<br>
-<br>
-
     <div class="wrapper">
+        <section class="hero">
+            <h1>Welcome to My AI Integration Journey</h1>
+            <p>Discover how AI has shaped and enhanced my projects.</p>
+            <a href="#ai-usage" class="cta-button">Learn More</a>
+        </section>
+
         <section class="ai-section" id="ai-usage">
             <h2>AI Usage and Contributions</h2>
             <p>My portfolio incorporates AI-driven insights and automation in the following ways:</p>
             <ul class="ai-list">
-                <li>- 🚀 Website Structure & Layout: AI-assisted in organizing pages and layout design.</li>
-                <li>- 🎨 Styling & Design Elements: AI-suggested color schemes, fonts, and UI/UX improvements.</li>
-                <li>- 💡 Navigation & User Experience: AI ensured clear, easy-to-use navigation, by reworking original Navigation Design</li>
-                <li>- 🎨 Animations and Style Design Enhancements, Debugged and Reworked Grid Gallery Glitches and Bugs</li>
-                <li>- 🚀 Debugging and Rework, AI Assisted in Fixing Bugs and Reworking Code to be presented effectively and work efficiently.</li>
+                <li><img src="icons/structure.png" alt="Structure Icon"> 🚀 Website Structure & Layout: AI-assisted in organizing pages and layout design.</li>
+                <li><img src="icons/styling.png" alt="Styling Icon"> 🎨 Styling & Design Elements: AI-suggested color schemes, fonts, and UI/UX improvements.</li>
+                <li><img src="icons/navigation.png" alt="Navigation Icon"> 💡 Navigation & User Experience: AI ensured clear, easy-to-use navigation, by reworking original Navigation Design.</li>
+                <li><img src="icons/animation.png" alt="Animation Icon"> 🎨 Animations and Style Design Enhancements, Debugged and Reworked Grid Gallery Glitches and Bugs.</li>
+                <li><img src="icons/debugging.png" alt="Debugging Icon"> 🚀 Debugging and Rework, AI Assisted in Fixing Bugs and Reworking Code to be presented effectively and work efficiently.</li>
             </ul>
         </section>
     </div>
