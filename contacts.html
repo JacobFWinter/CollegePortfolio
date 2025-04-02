@@ -68,32 +68,31 @@
         }
 
         .hamburger {
-            font-size: 30px; /* Font size for the hamburger icon */
-            cursor: pointer; /* Change cursor to pointer on hover */
-            padding: 10px; /* Add padding */
-            background: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
-            border-radius: 5px; /* Rounded corners */
-            transition: background 0.3s; /* Smooth transition for background change */
-            z-index: 1100; /* Ensure the hamburger icon is above other elements */
+            font-size: 30px;
+            cursor: pointer;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+            transition: background 0.3s;
+            position: relative; /* Make it relative to position it correctly */
+            right: 30px; /* Move it slightly left if it is too far right */
         }
 
         .hamburger:hover {
             background: rgba(255, 255, 255, 0.4); /* Change background on hover */
         }
-
+        
         nav {
-            position: fixed; /* Position the nav elements fixed */
-            top: 60px; /* Position below the header */
-            right: 0; /* Align to the right */
-            width: 250px; /* Set the width */
-            background: rgba(0, 0, 0, 0.9); /* Semi-transparent background */
-            text-align: left; /* Align text to the left */
-            border-radius: 5px; /* Rounded corners */
-            padding: 10px; /* Add padding */
-            display: none; /* Hide the nav by default */
-            transition: transform 0.3s ease-in-out; /* Smooth transition for transform */
-            transform: translateX(100%); /* Initially hide the nav off-screen */
-            z-index: 1000; /* Ensure the nav is above other elements */
+            position: absolute;
+            top: 60px;
+            right: 10px; /* Adjust this value to ensure the menu is fully visible */
+            width: 250px;
+            background: rgba(0, 0, 0, 0.9);
+            text-align: left;
+            border-radius: 5px;
+            padding: 10px;
+            display: none;
+            transition: all 0.3s ease;
         }
 
         nav.active {
