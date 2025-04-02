@@ -1,192 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Metadata and links to external resources -->
+    <!-- Set the character encoding for the document to UTF-8 -->
     <meta charset="UTF-8">
+    <!-- Set the viewport to make the website responsive on all devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Define the title of the webpage, which appears in the browser tab -->
     <title>Homepage - Portfolio</title>
-    <!-- Font Awesome for icons -->
+    <!-- Link to Font Awesome library for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <!-- AOS for animations -->
+    <!-- Link to AOS (Animate On Scroll) library for scroll animations -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-    <!-- Link to external stylesheet -->
+    <!-- Link to the external stylesheet for custom styles -->
     <link rel="stylesheet" href="styles.css">
     <style>
-        /* General Styles */
+        /* General Styles for the entire body */
         body {
-            margin: 0;
-            font-family: 'Roboto', sans-serif;
-            background: linear-gradient(135deg, #2c3e50, #4ca1af);
-            background-image: URL(Library/FallenAngel.jpg); /* Add your image path here */
-            background-size: cover; /* This will make sure the image covers the entire background */
-            background-repeat: no-repeat; /* This will prevent the image from repeating */
-            background-position: center; /* This will center the image in the background */
-            color: #fff;
-            text-align: center;
+            margin: 0; /* Remove default margin */
+            font-family: 'Roboto', sans-serif; /* Set the font family */
+            background: linear-gradient(135deg, #2c3e50, #4ca1af); /* Gradient background */
+            background-image: URL(Library/FallenAngel.jpg); /* Background image */
+            background-size: cover; /* Ensure the background image covers the entire area */
+            background-repeat: no-repeat; /* Prevent the background image from repeating */
+            background-position: center; /* Center the background image */
+            color: #fff; /* Set the text color to white */
+            text-align: center; /* Center-align the text */
         }
 
         /* Header Styles */
         header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 20px;
-            background: rgba(0, 0, 0, 0.7);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            left: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            display: flex; /* Use flexbox for layout */
+            justify-content: space-between; /* Space out the elements */
+            align-items: center; /* Align items vertically */
+            padding: 15px 20px; /* Add padding */
+            background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+            position: fixed; /* Fix the header at the top */
+            width: 100%; /* Full width */
+            top: 0; /* Align to the top */
+            left: 0; /* Align to the left */
+            z-index: 1000; /* Ensure the header is above other elements */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Add shadow for depth */
         }
 
         .logo {
-            font-size: 24px;
-            font-weight: bold;
-            display: flex;
-            align-items: center;
+            font-size: 24px; /* Font size for the logo */
+            font-weight: bold; /* Bold font */
+            display: flex; /* Use flexbox for layout */
+            align-items: center; /* Align items vertically */
         }
 
         .logo img {
-            width: 40px;
-            height: 40px;
-            margin-right: 10px;
+            width: 40px; /* Set the width of the logo image */
+            height: 40px; /* Set the height of the logo image */
+            margin-right: 10px; /* Add margin to the right of the image */
         }
 
         .hamburger {
-            font-size: 30px;
-            cursor: pointer;
-            padding: 10px;
-            background: rgba(255, 255, 255, 0.2);
-            border-radius: 5px;
-            transition: background 0.3s;
+            font-size: 30px; /* Font size for the hamburger icon */
+            cursor: pointer; /* Change cursor to pointer on hover */
+            padding: 10px; /* Add padding */
+            background: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+            border-radius: 5px; /* Rounded corners */
+            transition: background 0.3s; /* Smooth transition for background change */
         }
 
         .hamburger:hover {
-            background: rgba(255, 255, 255, 0.4);
+            background: rgba(255, 255, 255, 0.4); /* Change background on hover */
         }
 
         nav {
-            position: absolute;
-            top: 60px;
-            right: 0;
-            width: 250px;
-            background: rgba(0, 0, 0, 0.9);
-            text-align: left;
-            border-radius: 5px;
-            padding: 10px;
-            display: none;
-            transition: all 0.3s ease;
+            position: absolute; /* Position the nav elements absolutely */
+            top: 60px; /* Position below the header */
+            right: 0; /* Align to the right */
+            width: 250px; /* Set the width */
+            background: rgba(0, 0, 0, 0.9); /* Semi-transparent background */
+            text-align: left; /* Align text to the left */
+            border-radius: 5px; /* Rounded corners */
+            padding: 10px; /* Add padding */
+            display: none; /* Hide the nav by default */
+            transition: all 0.3s ease; /* Smooth transition for all properties */
         }
 
         nav.active {
-            display: block;
+            display: block; /* Display the nav when active */
         }
 
         nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
+            list-style: none; /* Remove default list style */
+            padding: 0; /* Remove default padding */
+            margin: 0; /* Remove default margin */
         }
 
         nav ul li {
-            padding: 10px;
+            padding: 10px; /* Add padding to list items */
         }
 
         nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-size: 18px;
-            display: block;
-            transition: color 0.3s ease;
+            color: white; /* Set link color to white */
+            text-decoration: none; /* Remove default underline */
+            font-size: 18px; /* Set font size */
+            display: block; /* Make links block elements */
+            transition: color 0.3s ease; /* Smooth transition for color change */
         }
 
         nav ul li a:hover {
-            color: #95a5a6;
+            color: #95a5a6; /* Change link color on hover */
         }
 
         /* Hero Section */
         .hero {
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            text-align: center;
-            padding: 20px;
-            background: url('hero-bg.jpg') no-repeat center center/cover;
+            height: 100vh; /* Full viewport height */
+            display: flex; /* Use flexbox for layout */
+            justify-content: center; /* Center content horizontally */
+            align-items: center; /* Center content vertically */
+            flex-direction: column; /* Stack content vertically */
+            text-align: center; /* Center-align text */
+            padding: 20px; /* Add padding */
+            background: url('hero-bg.jpg') no-repeat center center/cover; /* Background image */
         }
 
         .hero h1 {
-            font-size: 50px;
-            margin: 10px 0;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            animation: fadeIn 2s ease-in-out;
+            font-size: 50px; /* Set font size */
+            margin: 10px 0; /* Add margin */
+            text-transform: uppercase; /* Uppercase text */
+            letter-spacing: 2px; /* Increase letter spacing */
+            animation: fadeIn 2s ease-in-out; /* Fade-in animation */
         }
 
         .hero p {
-            font-size: 20px;
-            margin-bottom: 20px;
-            animation: fadeIn 2s ease-in-out;
+            font-size: 20px; /* Set font size */
+            margin-bottom: 20px; /* Add margin */
+            animation: fadeIn 2s ease-in-out; /* Fade-in animation */
         }
 
         .cta-button {
-            background: #1338BE;
-            color: white;
-            padding: 15px 30px;
-            text-decoration: none;
-            font-size: 20px;
-            border-radius: 5px;
-            transition: background 0.3s, transform 0.2s;
-            animation: fadeIn 2s ease-in-out;
+            background: #1338BE; /* Button background color */
+            color: white; /* Button text color */
+            padding: 15px 30px; /* Add padding */
+            text-decoration: none; /* Remove default underline */
+            font-size: 20px; /* Set font size */
+            border-radius: 5px; /* Rounded corners */
+            transition: background 0.3s, transform 0.2s; /* Smooth transition for background and transform */
+            animation: fadeIn 2s ease-in-out; /* Fade-in animation */
         }
 
         .cta-button:hover {
-            background: #34495e;
-            transform: scale(1.05);
+            background: #34495e; /* Change background on hover */
+            transform: scale(1.05); /* Slightly enlarge button on hover */
         }
 
         @keyframes fadeIn {
             0% {
-                opacity: 0;
-                transform: translateY(20px);
+                opacity: 0; /* Start with 0 opacity */
+                transform: translateY(20px); /* Start 20px below */
             }
             100% {
-                opacity: 1;
-                transform: translateY(0);
+                opacity: 1; /* End with full opacity */
+                transform: translateY(0); /* End at original position */
             }
         }
 
         /* Footer Section */
         footer {
-            background: rgba(0, 0, 0, 0.8);
-            padding: 20px;
-            text-align: center;
-            color: white;
-            margin-top: 40px;
-            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
+            background: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+            padding: 20px; /* Add padding */
+            text-align: center; /* Center-align text */
+            color: white; /* Set text color to white */
+            margin-top: 40px; /* Add margin to the top */
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3); /* Add shadow for depth */
         }
 
         .footer-links a {
-            color: #95a5a6;
-            text-decoration: none;
-            margin: 0 10px;
-            transition: color 0.3s ease;
+            color: #95a5a6; /* Set link color */
+            text-decoration: none; /* Remove default underline */
+            margin: 0 10px; /* Add margin */
+            transition: color 0.3s ease; /* Smooth transition for color change */
         }
 
         .footer-links a:hover {
-            color: #fff;
+            color: #fff; /* Change link color on hover */
         }
     </style>
     <script defer>
-        // Function to toggle the menu visibility
+        // Function to toggle the visibility of the navigation menu
         function toggleMenu() {
             var menu = document.getElementById("nav-menu");
             menu.classList.toggle("active");
         }
 
-        // Close the menu if clicked outside
+        // Event listener to close the menu if clicked outside of it
         document.addEventListener("click", function(event) {
             var menu = document.getElementById("nav-menu");
             var hamburger = document.querySelector(".hamburger");
@@ -195,22 +197,26 @@
             }
         });
 
-        // Add 'visible' class to elements with 'fade-in' class on page load
+        // Add 'visible' class to elements with 'fade-in' class when the document is fully loaded
         document.addEventListener('DOMContentLoaded', function() {
             document.querySelector('.fade-in').classList.add('visible');
         });
     </script>
 </head>
 <body>
-    <!-- Header section with logo and navigation menu -->
+    <!-- Header section containing the logo and navigation menu -->
     <header>
         <div class="logo">
+            <!-- Link to the homepage with the logo image -->
             <a href="index.html"><img src="logo.png" alt="Portfolio Logo"></a>
+            <!-- Link to the homepage with the text "Jacob Winter" -->
             <a href="index.html" style="text-decoration:none;color:White">Jacob Winter</a>
         </div>
+        <!-- Hamburger icon for toggling the navigation menu -->
         <div class="hamburger" onclick="toggleMenu()">
             &#9776;
         </div>
+        <!-- Navigation menu -->
         <nav id="nav-menu">
             <ul>
                 <li><a href="index.html">Homepage</a></li>
@@ -225,11 +231,14 @@
         </nav>
     </header>
 
-    <!-- Hero section with main content -->
+    <!-- Hero section with the main content -->
     <section class="hero">
         <div class="hero-content" data-aos="fade-up">
+            <!-- Main heading -->
             <h1>Jacob Winter | Business Technology</h1>
+            <!-- Subheading -->
             <p>Explore my journey in combining Digital Communications & Marketing</p>
+            <!-- Call-to-action button -->
             <a href="information.html" class="cta-button">Learn More</a>
         </div>
     </section>
@@ -238,15 +247,19 @@
     <footer>
         <p>&copy; 2025 Jacob's Portfolio. All rights reserved.</p>
         <div class="footer-links">
+            <!-- Email link -->
             <a href="mailto:jfw001@lvc.edu">Email</a>
+            <!-- LinkedIn profile link -->
             <a href="https://www.linkedin.com/in/jacob-winter-52a160263/">LinkedIn</a>
+            <!-- Facebook profile link -->
             <a href="https://www.facebook.com/jacob.winter.33671">Facebook</a>
         </div>
     </footer>
 
-    <!-- AOS animation script -->
+    <!-- Include AOS library for animations -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
+        // Initialize AOS library
         AOS.init();
     </script>
 </body>
