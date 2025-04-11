@@ -15,16 +15,13 @@
     <script defer src="scripts.js"></script>
     <style>
         /* General Styles */
-        html, body {
-            height: 100%; /* Full height */
-            margin: 0; /* Remove default margin */
-            font-family: 'Roboto', sans-serif; /* Set the font family */
-            background: linear-gradient(135deg, #2c3e50, #3a506b, #5c677d); /* Gradient background */
-            color: #fff; /* Set the text color to white */
-            text-align: center; /* Center-align the text */
-            display: flex; /* Use flexbox for layout */
-            flex-direction: column; /* Stack content vertically */
-        }
+        body {
+        font-family: 'Roboto', sans-serif;
+        color: #fff;
+        margin: 0;
+        padding: 0;
+        background: #1e2a38;
+    }
 
         /* Wrapper to push footer down */
         .wrapper {
@@ -187,47 +184,80 @@
         }
 
         /* AI Usage and Contributions Section */
-        .ai-section {
-            padding: 60px 20px; /* Add padding */
-            background: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
-            margin-top: 40px; /* Add margin to the top */
-            border-top: 5px solid #e74c3c; /* Add top border */
-        }
-        .ai-section h2 {
-            font-size: 36px; /* Set font size */
-            margin-bottom: 20px; /* Add margin to the bottom */
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add text shadow */
-        }
-        .ai-section p {
-            font-size: 20px; /* Set font size */
-            margin-bottom: 30px; /* Add margin to the bottom */
-        }
-        .ai-list {
-            list-style: none; /* Remove default list style */
-            padding: 0; /* Remove default padding */
-            margin: 0 auto; /* Center the list */
-            max-width: 600px; /* Maximum width */
-            text-align: left; /* Left-align text */
-        }
+
+    .ai-section {
+        padding: 60px 20px;
+        margin: 40px auto 0;
+        max-width: 1200px;
+        background: rgba(0, 0, 0, 0.8);
+        border-radius: 8px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    }
+
+    .ai-section h2 {
+        font-size: 36px;
+        text-align: center;
+        margin-bottom: 25px;
+        color: #e74c3c;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    }
+
+    .ai-section p {
+        font-size: 18px;
+        line-height: 1.8;
+        margin-bottom: 25px;
+        text-align: justify;
+    }
+
+    .ai-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .ai-list li {
+        flex: 1 1 calc(50% - 40px); /* Make items take 50% width with spacing */
+        margin: 10px;
+        padding: 20px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 8px;
+        transition: background 0.3s, transform 0.2s;
+        display: flex;
+        align-items: center;
+    }
+
+    .ai-list li:hover {
+        background: rgba(255, 255, 255, 0.2);
+        transform: translateY(-5px);
+    }
+
+    .ai-list li img {
+        width: 32px;
+        height: 32px;
+        margin-right: 15px;
+    }
+
+    .ai-list li strong {
+        color: #e74c3c;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
         .ai-list li {
-            font-size: 20px; /* Set font size */
-            margin-bottom: 15px; /* Add margin to the bottom */
-            display: flex; /* Use flexbox for layout */
-            align-items: center; /* Align items vertically */
-            padding: 10px; /* Add padding */
-            background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
-            border-radius: 5px; /* Rounded corners */
-            transition: background 0.3s; /* Smooth transition for background */
-        }
-        .ai-list li:hover {
-            background: rgba(255, 255, 255, 0.2); /* Change background on hover */
-        }
-        .ai-list li img {
-            width: 24px; /* Set the width of the image */
-            height: 24px; /* Set the height of the image */
-            margin-right: 10px; /* Add margin to the right of the image */
+            flex: 1 1 100%; /* Make items take full width on smaller screens */
         }
 
+        .ai-section h2 {
+            font-size: 28px;
+        }
+
+        .ai-section p {
+            font-size: 16px;
+        }
+    }
         /* Footer Section */
         footer {
             background: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
@@ -291,13 +321,13 @@
     <h2>AI Usage and Contributions</h2>
     <p>My portfolio incorporates AI-driven insights and automation in the following ways:</p>
     <ul class="ai-list">
-        <li>🚀 <strong>Website Structure & Layout:</strong> Leveraged AI for organizing pages, optimizing the layout, and ensuring an intuitive structure for users.</li>
-        <li>🎨 <strong>Styling & Design Elements:</strong> Utilized AI tools to suggest color schemes, typography, and design patterns for an engaging user interface.</li>
-        <li>💡 <strong>Navigation & User Experience:</strong> Enhanced navigation by reworking original designs with AI suggestions, ensuring seamless and efficient user interactions.</li>
-        <li>🎬 <strong>Animations and Style Enhancements:</strong> AI-driven debugging and reworking of animations to address glitches, improving both functionality and aesthetics.</li>
-        <li>🐞 <strong>Debugging and Optimization:</strong> AI-assisted in identifying and fixing bugs, reworking code for better performance and readability.</li>
-        <li>📊 <strong>Content Insights:</strong> AI tools were used to analyze and refine content for improved clarity and relevance.</li>
-        <li>📱 <strong>Responsive Design:</strong> Ensured the entire portfolio is fully responsive and optimized for various devices, from mobile phones to large screens.</li>
+        <li><img src="icons/structure.png" alt="Structure Icon"> <strong>Website Structure & Layout:</strong> Leveraged AI for organizing pages, optimizing the layout, and ensuring an intuitive structure for users.</li>
+        <li><img src="icons/design.png" alt="Design Icon"> <strong>Styling & Design Elements:</strong> Utilized AI tools to suggest color schemes, typography, and design patterns for an engaging user interface.</li>
+        <li><img src="icons/navigation.png" alt="Navigation Icon"> <strong>Navigation & User Experience:</strong> Enhanced navigation by reworking original designs with AI suggestions, ensuring seamless and efficient user interactions.</li>
+        <li><img src="icons/animations.png" alt="Animations Icon"> <strong>Animations and Style Enhancements:</strong> AI-driven debugging and reworking of animations to address glitches, improving both functionality and aesthetics.</li>
+        <li><img src="icons/debug.png" alt="Debug Icon"> <strong>Debugging and Optimization:</strong> AI-assisted in identifying and fixing bugs, reworking code for better performance and readability.</li>
+        <li><img src="icons/content.png" alt="Content Icon"> <strong>Content Insights:</strong> AI tools were used to analyze and refine content for improved clarity and relevance.</li>
+        <li><img src="icons/responsive.png" alt="Responsive Icon"> <strong>Responsive Design:</strong> Ensured the entire portfolio is fully responsive and optimized for various devices, from mobile phones to large screens.</li>
     </ul>
 </section>
 
@@ -305,10 +335,10 @@
     <h2>What Tools Did I Use?</h2>
     <p>I primarily used GitHub Copilot, an AI-powered assistant, for various tasks, including:</p>
     <ul class="ai-list">
-        <li>💻 Writing and refining HTML, CSS, and JavaScript code for my portfolio.</li>
-        <li>🛠 Debugging and troubleshooting complex issues in my scripts.</li>
-        <li>✨ Suggesting design improvements and optimizing user experience.</li>
-        <li>📖 Providing context-aware documentation and code suggestions to streamline development.</li>
+        <li><img src="icons/code.png" alt="Code Icon"> 💻 <strong>Writing and refining code:</strong> HTML, CSS, and JavaScript for my portfolio.</li>
+        <li><img src="icons/debug.png" alt="Debug Icon"> 🛠 <strong>Debugging:</strong> Troubleshooting and resolving issues effectively.</li>
+        <li><img src="icons/design.png" alt="Design Icon"> ✨ <strong>Design enhancements:</strong> Suggesting design improvements and optimizing user experience.</li>
+        <li><img src="icons/docs.png" alt="Docs Icon"> 📖 <strong>Documentation:</strong> Providing context-aware suggestions to streamline development.</li>
     </ul>
 </section>
 
@@ -316,11 +346,11 @@
     <h2>Processes</h2>
     <p>AI integration followed these key steps:</p>
     <ul class="ai-list">
-        <li>🔍 <strong>Ideation:</strong> Brainstormed design ideas and features using AI-generated suggestions.</li>
-        <li>🖌 <strong>Design:</strong> Implemented AI-proposed color schemes, typography, and layout ideas in the early design phase.</li>
-        <li>🛠 <strong>Implementation:</strong> Used AI to write and refine code, ensuring functionality and responsiveness.</li>
-        <li>🐞 <strong>Debugging:</strong> Leveraged AI to identify and fix bugs, optimizing performance and user experience.</li>
-        <li>📊 <strong>Analysis:</strong> Used AI tools to analyze the content and ensure clarity and relevance for the target audience.</li>
+        <li><img src="icons/ideation.png" alt="Idea Icon"> 🔍 <strong>Ideation:</strong> Brainstormed design ideas and features using AI-generated suggestions.</li>
+        <li><img src="icons/design.png" alt="Design Icon"> 🖌 <strong>Design:</strong> Implemented AI-proposed color schemes, typography, and layout ideas in the early design phase.</li>
+        <li><img src="icons/implementation.png" alt="Implementation Icon"> 🛠 <strong>Implementation:</strong> Used AI to write and refine code, ensuring functionality and responsiveness.</li>
+        <li><img src="icons/debug.png" alt="Debug Icon"> 🐞 <strong>Debugging:</strong> Leveraged AI to identify and fix bugs, optimizing performance and user experience.</li>
+        <li><img src="icons/analysis.png" alt="Analysis Icon"> 📊 <strong>Analysis:</strong> Used AI tools to analyze the content and ensure clarity and relevance for the target audience.</li>
     </ul>
 </section>
 
@@ -328,11 +358,11 @@
     <h2>What Did I Learn?</h2>
     <p>Working with AI tools like GitHub Copilot taught me several valuable lessons:</p>
     <ul class="ai-list">
-        <li>💡 <strong>Efficiency:</strong> AI can significantly accelerate the coding process by providing context-aware suggestions and automating repetitive tasks.</li>
-        <li>🎨 <strong>Creativity:</strong> AI tools can offer design inspiration and creative solutions that I might not have considered otherwise.</li>
-        <li>🔍 <strong>Precision:</strong> Using AI for debugging highlighted the importance of clean, readable, and efficient code.</li>
-        <li>📚 <strong>Continuous Learning:</strong> Integrating AI into my workflow allowed me to explore new technologies and improve my technical skills.</li>
-        <li>🤝 <strong>Collaboration:</strong> AI tools serve as valuable collaborators, providing insights and suggestions that complement human creativity and expertise.</li>
+        <li><img src="icons/efficiency.png" alt="Efficiency Icon"> 💡 <strong>Efficiency:</strong> AI can significantly accelerate the coding process by providing context-aware suggestions and automating repetitive tasks.</li>
+        <li><img src="icons/creativity.png" alt="Creativity Icon"> 🎨 <strong>Creativity:</strong> AI tools can offer design inspiration and creative solutions that I might not have considered otherwise.</li>
+        <li><img src="icons/precision.png" alt="Precision Icon"> 🔍 <strong>Precision:</strong> Using AI for debugging highlighted the importance of clean, readable, and efficient code.</li>
+        <li><img src="icons/learning.png" alt="Learning Icon"> 📚 <strong>Continuous Learning:</strong> Integrating AI into my workflow allowed me to explore new technologies and improve my technical skills.</li>
+        <li><img src="icons/collaboration.png" alt="Collaboration Icon"> 🤝 <strong>Collaboration:</strong> AI tools serve as valuable collaborators, providing insights and suggestions that complement human creativity and expertise.</li>
     </ul>
 </section>
     </div>
