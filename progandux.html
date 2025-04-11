@@ -6,7 +6,7 @@
     <!-- Set the viewport to make the website responsive on all devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Define the title of the webpage, which appears in the browser tab -->
-    <title>Programming & User Experience - Portfolio</title>
+    <title>Communications - Portfolio</title>
     <!-- Link to the external stylesheet for custom styles -->
     <link rel="stylesheet" href="styles.css">
     <!-- Link to Google Fonts for the 'Roboto' font family -->
@@ -40,6 +40,13 @@
             display: flex; /* Use flexbox for layout */
             flex-direction: column; /* Stack content vertically */
             min-height: 100vh; /* Minimum height of the viewport */
+        }
+        para {
+            content-align: center;
+            text-align: left;
+            margin: 20px auto;
+            width: 70%;
+            display: block;
         }
 
         /* Header styles */
@@ -75,54 +82,59 @@
             padding: 10px;
             background: rgba(255, 255, 255, 0.2);
             border-radius: 5px;
-            transition: background 0.3s;
-            position: relative; /* Make it relative to position it correctly */
-            right: 30px; /* Move it slightly left if it is too far right */
+            display: flex; /* Use flexbox for alignment */
+            align-items: center; /* Center vertically */
+            justify-content: center; /* Center horizontally */
+            position: relative; /* Adjust position within the header */
+            left: -50px; /* Adjust this value to control horizontal placement */
         }
 
         .hamburger:hover {
-            background: rgba(255, 255, 255, 0.4); /* Change background on hover */
+            background: rgba(255, 255, 255, 0.4);
         }
-        
+
+        .hamburger span {
+            margin-left: 10px;
+            font-size: 18px;
+        }
+
         nav {
             position: absolute;
             top: 60px;
-            right: 10px; /* Adjust this value to ensure the menu is fully visible */
+            right: 10px;
             width: 250px;
             background: rgba(0, 0, 0, 0.9);
             text-align: left;
             border-radius: 5px;
             padding: 10px;
             display: none;
-            transition: all 0.3s ease;
+            transition: all 0.3s;
         }
 
         nav.active {
-            display: block; /* Display the nav when active */
-            transform: translateX(0); /* Move the nav into view */
+            display: block;
         }
 
         nav ul {
-            list-style: none; /* Remove default list style */
-            padding: 0; /* Remove default padding */
-            margin: 0; /* Remove default margin */
+            list-style: none;
+            padding: 0;
+            margin: 0;
         }
 
         nav ul li {
-            padding: 10px; /* Add padding to list items */
+            padding: 10px;
         }
 
         nav ul li a {
-            color: white; /* Set link color to white */
-            text-decoration: none; /* Remove default underline */
-            font-size: 18px; /* Set font size */
-            display: block; /* Make links block elements */
-            transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for color and transform */
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            display: block;
+            transition: color 0.3s;
         }
 
         nav ul li a:hover {
-            color: #95a5a6; /* Change link color on hover */
-            transform: scale(1.05); /* Slightly enlarge link on hover */
+            color: #95a5a6;
         }
 
         /* Styles for the main content section */
@@ -132,6 +144,7 @@
             margin: auto; /* Center the content */
             flex: 1; /* Allow the content to grow */
             animation: fadeInUp 1s ease-in-out; /* Fade-in animation */
+            text-align: left;
         }
 
         .content h1 {
@@ -146,37 +159,58 @@
         }
 
         /* Styles for various sections within the content */
-        .projects, .marketing-strategy, .gallery {
+        .projects, .marketing-strategy, .case-studies, .gallery {
             margin-top: 40px; /* Add margin to the top */
             text-align: center; /* Center-align text */
             padding: 40px 20px; /* Add padding */
             animation: fadeInUp 1s ease-in-out; /* Fade-in animation */
         }
 
-        .projects h2, .marketing-strategy h2, .gallery h2 {
+        .projects h2, .marketing-strategy h2, .case-studies h2, .gallery h2 {
             font-size: 28px; /* Set font size for subheadings */
             margin-bottom: 15px; /* Add margin to the bottom */
         }
 
         /* Styles for the project grid */
-        .project-grid, .gallery-grid {
+        .project-grid {
             display: flex; /* Use flexbox for layout */
             flex-wrap: wrap; /* Wrap the items */
             justify-content: center; /* Center-align items */
             gap: 20px; /* Add gap between items */
         }
 
-        .project-item, .gallery-grid img {
+        .project-item {
             background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
             padding: 15px; /* Add padding */
             border-radius: 5px; /* Rounded corners */
             width: 250px; /* Set the width */
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+            transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover effects */
         }
-
-        .project-item img, .gallery-grid img {
+        
+        .project-item:hover {
+            transform: scale(1.05); /* Slightly enlarge the project item */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a deeper shadow */
+        }
+        
+        .project-item img {
             width: 100%; /* Full width */
             border-radius: 5px; /* Rounded corners */
+            transition: opacity 0.3s; /* Smooth transition for image hover */
+        }
+        
+        .project-item:hover img {
+            opacity: 0.8; /* Slightly fade the image on hover */
+        }
+        
+        .project-item h3 {
+            margin-top: 10px; /* Add margin above the title */
+            font-size: 20px; /* Set font size */
+            transition: color 0.3s; /* Smooth transition for text hover */
+        }
+        
+        .project-item:hover h3 {
+            color: #3498db; /* Change text color on hover */
         }
 
         /* Styles for call-to-action buttons */
@@ -195,6 +229,39 @@
         .cta-button:hover {
             background: #2980b9; /* Change background on hover */
             transform: scale(1.05); /* Slightly enlarge button on hover */
+        }
+
+        .button2 {
+            display: inline-block; /* Inline-block element */
+            margin-top: 10px; /* Add margin to the top */
+            padding: 8px 15px; /* Add padding */
+            background: linear-gradient(45deg, #3498db, #2980b9); /* Gradient background */
+            color: white; /* Set text color to white */
+            text-decoration: none; /* Remove default underline */
+            font-size: 20px; /* Set font size */
+            border-radius: 5px; /* Rounded corners */
+            transition: background 0.3s, transform 0.2s; /* Smooth transition for background and transform */
+            justify-content: center; /* Center-align content */
+        }
+
+        .button2:hover {
+            background: #2980b9; /* Change background on hover */
+            transform: scale(1.05); /* Slightly enlarge button on hover */
+        }
+
+        /* Styles for the gallery grid */
+        .gallery-grid {
+            display: flex; /* Use flexbox for layout */
+            justify-content: center; /* Center-align items */
+            gap: 15px; /* Add gap between items */
+            flex-wrap: wrap; /* Wrap the items */
+        }
+
+        .gallery-grid img {
+            width: 200px; /* Set the width */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 5px; /* Rounded corners */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
         }
 
         /* Footer styles */
@@ -216,6 +283,18 @@
             text-decoration: underline; /* Underline on hover */
         }
 
+        .centered-container {
+            display: flex; /* Use flexbox for layout */
+            justify-content: center; /* Center-align items */
+            align-items: center; /* Align items vertically */
+            min-height: 20vh; /* Minimum height of the container */
+        }
+
+        .container {
+            text-align: left; /* Left-align text */
+            max-width: 600px; /* Maximum width of the container */
+        }
+
         @keyframes fadeInUp {
             0% {
                 opacity: 0; /* Start with 0 opacity */
@@ -226,68 +305,57 @@
                 transform: translateY(0); /* End at original position */
             }
         }
+
     </style>
 </head>
 <body>
     <!-- Header section containing the logo and navigation menu -->
     <header>
         <div class="logo">
-            <!-- Link to the homepage with the logo image -->
             <a href="index.html"><img src="logo.png" alt="Portfolio Logo"></a>
-            <!-- Link to the homepage with the text "Jacob Winter" -->
             <a href="index.html" style="text-decoration:none;color:White">Jacob Winter</a>
         </div>
-        <!-- Hamburger icon for toggling the navigation menu -->
         <div class="hamburger" onclick="toggleMenu()">
-            &#9776;
+            &#9776; <span>Menu</span>
         </div>
-        <!-- Navigation menu -->
         <nav id="nav-menu">
             <ul>
-                <li><a href="index.html">Homepage</a></li>
-                <li><a href="information.html">Information</a></li>
-                <li><a href="marketing.html">Marketing & Business Technology</a></li>
-                <li><a href="design.html">Design & Videography</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="marketing.html">Digital Marketing</a></li>
+                <li><a href="design.html">Design / Videography</a></li>
                 <li><a href="communications.html">Communications</a></li>
-                <li><a href="progandux.html">Programming & User Experience</a></li>
-                <li><a href="contacts.html">Contact Me</a></li>
-                <li><a href="aiusage.html">AI Usage</a></li>
+                <li><a href="progandux.html">Programming</a></li>
+                <li><a href="userexperience.html">User Experience</a></li>
+                <li><a href="information.html">Resume</a></li>
+                <li><a href="aiusage.html">AI Tools</a></li>
+                <li><a href="contacts.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <!-- Main content section -->
-    <section class="content">
-        <h1>Programming & User Experience</h1>
-        <div class="centered-container">
-            <div class="container">
-                <!-- Description of the programming and user experience section -->
-                <p>Bridging functionality and usability, our programming and user experience work focuses on building intuitive, human-centered digital solutions. From front-end development to interactive prototypes, we aim to enhance the user experience through thoughtful design and efficient coding practices.</p>
-            </div>
+<div class="projects">
+    <h2>Programming Projects</h2></h2>
+<para>Bridging functionality and usability, our programming and user experience work focuses on building intuitive, human-centered digital solutions. From front-end development to interactive prototypes, we aim to enhance the user experience through thoughtful design and efficient coding practices.</para>
+    <br>
+    <br>
+    <div class="project-grid">
+        <!-- Individual project item -->
+        <div class="project-item" onclick="window.open('Library/ProgrammingMidterm.html', '_blank')">
+            <img src="Library/ProgrammingCover.png" alt="Fallen Angel Cover">
+            <h3>Website Programming</h3>
+            <p>This project demonstrates my foundational skills in front-end web development, including semantic HTML structure, responsive design, and custom styling with CSS. It reflects my ability to create clean and efficient code for user-friendly websites.</p>
         </div>
+    </div>
+</div>
+        <!-- Case study section -->
 
-        <!-- Programming and UX projects section -->
-        <div class="projects">
-            <h2>Programming & UX Projects</h2>
-            <div class="project-grid">
-                <!-- Individual project item -->
-                <div class="project-item">
-                    <img src="Library/ProgrammingCover.png" alt="Project 1">
-                    <h3>Website Programming</h3>
-                    <p>This project demonstrates my foundational skills in front-end web development, including semantic HTML structure, responsive design, and custom styling with CSS. It reflects my ability to create clean and efficient code for user-friendly websites.</p>
-                    <a href="Library/ProgrammingMidterm.html" class="cta-button" target="_blank">View Project</a>
-                </div>
-                <!-- Individual project item -->
-                <div class="project-item">
-                    <img src="Library/PrototypeCover.png" alt="Project 2">
-                    <h3>Usability and Design</h3>
-                    <p>This project explores core principles of user-centered design, focusing on accessibility, clarity, and intuitive interface layout. Using Figma, I applied foundational design principles to create prototypes that prioritize the user experience.</p>
-                    <a href="https://www.figma.com/design/6la9DxBODoMiZRdz5xrz46/Usability-and-Design-Final?node-id=0-1&t=R0k5fsnpUodo7YKD-1" class="cta-button" target="_blank">View Project</a>
-                </div>
-            </div>
-        </div>
     </section>
-
+<br>
+    <br>
+    <br>
+    <br>
+    <br>
     <!-- Footer section with contact links -->
     <footer>
         <p>&copy; 2025 Jacob's Portfolio. All rights reserved.</p>
@@ -300,5 +368,7 @@
             <a href="https://www.facebook.com/jacob.winter.33671"><i class="fab fa-facebook"></i> Facebook</a>
         </div>
     </footer>
+</body>
+</html>
 </body>
 </html>
