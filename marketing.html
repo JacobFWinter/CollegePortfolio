@@ -75,54 +75,59 @@
             padding: 10px;
             background: rgba(255, 255, 255, 0.2);
             border-radius: 5px;
-            transition: background 0.3s;
-            position: relative; /* Make it relative to position it correctly */
-            right: 30px; /* Move it slightly left if it is too far right */
+            display: flex; /* Use flexbox for alignment */
+            align-items: center; /* Center vertically */
+            justify-content: center; /* Center horizontally */
+            position: relative; /* Adjust position within the header */
+            left: -50px; /* Adjust this value to control horizontal placement */
         }
 
         .hamburger:hover {
-            background: rgba(255, 255, 255, 0.4); /* Change background on hover */
+            background: rgba(255, 255, 255, 0.4);
         }
-        
+
+        .hamburger span {
+            margin-left: 10px;
+            font-size: 18px;
+        }
+
         nav {
             position: absolute;
             top: 60px;
-            right: 10px; /* Adjust this value to ensure the menu is fully visible */
+            right: 10px;
             width: 250px;
             background: rgba(0, 0, 0, 0.9);
             text-align: left;
             border-radius: 5px;
             padding: 10px;
             display: none;
-            transition: all 0.3s ease;
+            transition: all 0.3s;
         }
 
         nav.active {
-            display: block; /* Display the nav when active */
-            transform: translateX(0); /* Move the nav into view */
+            display: block;
         }
 
         nav ul {
-            list-style: none; /* Remove default list style */
-            padding: 0; /* Remove default padding */
-            margin: 0; /* Remove default margin */
+            list-style: none;
+            padding: 0;
+            margin: 0;
         }
 
         nav ul li {
-            padding: 10px; /* Add padding to list items */
+            padding: 10px;
         }
 
         nav ul li a {
-            color: white; /* Set link color to white */
-            text-decoration: none; /* Remove default underline */
-            font-size: 18px; /* Set font size */
-            display: block; /* Make links block elements */
-            transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for color and transform */
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            display: block;
+            transition: color 0.3s;
         }
 
         nav ul li a:hover {
-            color: #95a5a6; /* Change link color on hover */
-            transform: scale(1.05); /* Slightly enlarge link on hover */
+            color: #95a5a6;
         }
 
         /* Styles for the main content section */
@@ -277,26 +282,22 @@
     <!-- Header section containing the logo and navigation menu -->
     <header>
         <div class="logo">
-            <!-- Link to the homepage with the logo image -->
-            <a href="index.html"><img src="logo.png" alt="Portfolio Logo"> </a>
-            <!-- Link to the homepage with the text "Jacob Winter" -->
+            <a href="index.html"><img src="logo.png" alt="Portfolio Logo"></a>
             <a href="index.html" style="text-decoration:none;color:White">Jacob Winter</a>
         </div>
-        <!-- Hamburger icon for toggling the navigation menu -->
         <div class="hamburger" onclick="toggleMenu()">
-            &#9776;
+            &#9776; <span>Menu</span>
         </div>
-        <!-- Navigation menu -->
         <nav id="nav-menu">
             <ul>
-                <li><a href="index.html">Homepage</a></li>
-                <li><a href="information.html">Information</a></li>
-                <li><a href="marketing.html">Marketing & Business Technology</a></li>
-                <li><a href="design.html">Design & Videography</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="marketing.html">Business Technology</a></li>
+                <li><a href="design.html">Design / Videography</a></li>
                 <li><a href="communications.html">Communications</a></li>
-                <li><a href="progandux.html">Programming & User Experience</a></li>
-                <li><a href="contacts.html">Contact Me</a></li>
-                <li><a href="aiusage.html">AI Usage</a></li>
+                <li><a href="progandux.html">Programming</a></li>
+                <li><a href="information.html">Resume</a></li>
+                <li><a href="aiusage.html">AI Tools</a></li>
+                <li><a href="contacts.html">Contact</a></li>
             </ul>
         </nav>
     </header>
