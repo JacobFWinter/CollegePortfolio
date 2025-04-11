@@ -131,6 +131,7 @@
             margin: auto; /* Center the content */
             flex: 1; /* Allow the content to grow */
             animation: fadeInUp 1s ease-in-out; /* Fade-in animation */
+            text-align: left;
         }
 
         .content h1 {
@@ -171,11 +172,32 @@
             border-radius: 5px; /* Rounded corners */
             width: 250px; /* Set the width */
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+            transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover effects */
         }
-
+        
+        .project-item:hover {
+            transform: scale(1.05); /* Slightly enlarge the project item */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a deeper shadow */
+        }
+        
         .project-item img {
             width: 100%; /* Full width */
             border-radius: 5px; /* Rounded corners */
+            transition: opacity 0.3s; /* Smooth transition for image hover */
+        }
+        
+        .project-item:hover img {
+            opacity: 0.8; /* Slightly fade the image on hover */
+        }
+        
+        .project-item h3 {
+            margin-top: 10px; /* Add margin above the title */
+            font-size: 20px; /* Set font size */
+            transition: color 0.3s; /* Smooth transition for text hover */
+        }
+        
+        .project-item:hover h3 {
+            color: #3498db; /* Change text color on hover */
         }
 
         /* Styles for call-to-action buttons */
@@ -192,6 +214,24 @@
         }
 
         .cta-button:hover {
+            background: #2980b9; /* Change background on hover */
+            transform: scale(1.05); /* Slightly enlarge button on hover */
+        }
+
+        .button2 {
+            display: inline-block; /* Inline-block element */
+            margin-top: 10px; /* Add margin to the top */
+            padding: 8px 15px; /* Add padding */
+            background: linear-gradient(45deg, #3498db, #2980b9); /* Gradient background */
+            color: white; /* Set text color to white */
+            text-decoration: none; /* Remove default underline */
+            font-size: 20px; /* Set font size */
+            border-radius: 5px; /* Rounded corners */
+            transition: background 0.3s, transform 0.2s; /* Smooth transition for background and transform */
+            justify-content: center; /* Center-align content */
+        }
+
+        .button2:hover {
             background: #2980b9; /* Change background on hover */
             transform: scale(1.05); /* Slightly enlarge button on hover */
         }
@@ -284,7 +324,7 @@
 
     <!-- Main content section -->
     <section class="content">
-        <h1>Design and Videography</h1>
+        <h1>Design and Videography Projects</h1>
         <div class="centered-container">
             <div class="container">
                 <!-- Description of the design and videography section -->
@@ -297,39 +337,34 @@
             <h2>Design Projects</h2>
             <div class="project-grid">
                 <!-- Individual project item -->
-                <div class="project-item">
+                <div class="project-item" onclick="window.open('Library/FallenAngel.jpg', '_blank')">
                     <img src="Library/FallenAngel.jpg" alt="Project 1">
                     <h3>Conceptualization Design</h3>
                     <p>"Fallen Angel" is a conceptual Photoshop artwork that visually explores themes of loss, redemption, and isolation. With dramatic lighting and soft cloud effects, the piece evokes a sense of otherworldly beauty.</p>
-                    <a href="Library/FallenAngel.jpg" class="cta-button" target="_blank">View Project</a>
                 </div>
                 <!-- Individual project item -->
-                <div class="project-item">
+               <div class="project-item" onclick="window.open('Library/GatorParkLogo.png', '_blank')">
                     <img src="Library/GatorParkLogo.png" alt="Project 2">
                     <h3>Logo and Brand Design</h3>
                     <p>The Everglades Gator Park logo is a striking representation of the rugged, wild nature of the Florida Everglades. The iconic alligator silhouette is paired with bold typography to create a memorable brand identity.</p>
-                    <a href="Library/GatorParkLogo.png" class="cta-button" target="_blank">View Project</a>
                 </div>
                 <!-- Individual project item -->
-                <div class="project-item">
+                <div class="project-item" onclick="window.open('Library/Poster.png', '_blank')">
                     <img src="Library/Poster.png" alt="Project 3">
                     <h3>InDesign Usage and Creation</h3>
                     <p>This digital poster captures a serene, stylized night landscape, where a winding path leads through lush, darkened hills under a glowing moon. The simplicity of the design highlights the beauty of the night sky.</p>
-                    <a href="Library/Poster.png" class="cta-button" target="_blank">View Project</a>
                 </div>
                 <!-- Individual project item -->
-                <div class="project-item">
+                <div class="project-item" onclick="window.open('Library/GalacticEmpireEdit.mp4', '_blank')">
                     <img src="Library/GalacticEmpireCover.png" alt="Project 4">
                     <h3>Video Editing</h3>
                     <p>This dynamic video edit pays homage to the iconic Galactic Empire, blending cinematic footage with motion graphics and sound design to evoke the grandeur and intensity of the Star Wars universe.</p>
-                    <a href="Library/GalacticEmpireEdit.mp4" class="cta-button" target="_blank">View Project</a>
                 </div>
                 <!-- Individual project item -->
-                <div class="project-item">
+                <div class="project-item" onclick="window.open('Library/Reach.jpg', '_blank')">
                     <img src="Library/Reach.jpg" alt="Project 5">
                     <h3>Photoshop Work Proficiency</h3>
                     <p>"Reach" is a striking black-and-white conceptual photography piece that portrays a hand reaching towards the light. The swirling cloud patterns and dramatic lighting create a sense of yearning and aspiration.</p>
-                    <a href="Library/Reach.jpg" class="cta-button" target="_blank">View Project</a>
                 </div>
             </div>
         </div>
