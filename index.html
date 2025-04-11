@@ -47,18 +47,17 @@
             height: 40px;
             margin-right: 10px;
         }
-
         .hamburger {
             font-size: 30px;
             cursor: pointer;
-            align-items: center;
-            justify-content: center;
             padding: 10px;
             background: rgba(255, 255, 255, 0.2);
             border-radius: 5px;
-            transition: background 0.3s;
-            position: relative; /* Make it relative to position it correctly */
-            right: 30px; /* Move it slightly left if it is too far right */
+            display: flex; /* Use flexbox for alignment */
+            align-items: center; /* Center vertically */
+            justify-content: center; /* Center horizontally */
+            position: relative; /* Adjust position within the header */
+            left: 20px; /* Adjust this value to control horizontal placement */
         }
 
         .hamburger:hover {
