@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Set the character encoding for the document to UTF-8 -->
+    <meta charset="UTF-8">
+    <!-- Set the viewport to make the website responsive on all devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Define the title of the webpage, which appears in the browser tab -->
+    <title>Communications - Portfolio</title>
+    <!-- Link to the external stylesheet for custom styles -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Link to Google Fonts for the 'Roboto' font family -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Link to Font Awesome library for icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <script defer>
+        // Function to toggle the visibility of the navigation menu
+        function toggleMenu() {
+            var menu = document.getElementById("nav-menu");
+            menu.classList.toggle("active");
+        }
+
+        // Event listener to close the menu if clicked outside of it
+        document.addEventListener("click", function(event) {
+            var menu = document.getElementById("nav-menu");
+            var hamburger = document.querySelector(".hamburger");
+            if (!hamburger.contains(event.target) && !menu.contains(event.target)) {
+                menu.classList.remove("active");
+            }
+        });
+    </script>
+    <style>
+        /* General styles for the entire body */
+        body {
+            margin: 0; /* Remove default margin */
+            font-family: 'Roboto', sans-serif; /* Set the font family */
+            background: linear-gradient(45deg, #2c3e50, #3a506b, #5c677d, #3498db); /* Gradient background */
+            color: #fff; /* Set the text color to white */
+            text-align: center; /* Center-align the text */
+            display: flex; /* Use flexbox for layout */
+            flex-direction: column; /* Stack content vertically */
+            min-height: 100vh; /* Minimum height of the viewport */
+        }
+        para {
+            content-align: center;
+            text-align: left;
+            margin: 20px auto;
+            width: 70%;
+            display: block;
+        }
+
+        /* Header styles */
+        header {
+            display: flex; /* Use flexbox for layout */
+            justify-content: space-between; /* Space out the elements */
+            align-items: center; /* Align items vertically */
+            padding: 15px 20px; /* Add padding */
+            background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+            position: fixed; /* Fix the header at the top */
+            width: 100%; /* Full width */
+            top: 0; /* Align to the top */
+            left: 0; /* Align to the left */
+            z-index: 1000; /* Ensure the header is above other elements */
+        }
+
+        .logo {
+            font-size: 24px; /* Font size for the logo */
+            font-weight: bold; /* Bold font */
+            display: flex; /* Use flexbox for layout */
+            align-items: center; /* Align items vertically */
+        }
+
+        .logo img {
+            width: 40px; /* Set the width of the logo image */
+            height: 40px; /* Set the height of the logo image */
+            margin-right: 10px; /* Add margin to the right of the image */
+        }
+
+        .hamburger {
+            font-size: 30px;
+            cursor: pointer;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+            display: flex; /* Use flexbox for alignment */
+            align-items: center; /* Center vertically */
+            justify-content: center; /* Center horizontally */
+            position: relative; /* Adjust position within the header */
+            left: -50px; /* Adjust this value to control horizontal placement */
+        }
+
+        .hamburger:hover {
+            background: rgba(255, 255, 255, 0.4);
+        }
+
+        .hamburger span {
+            margin-left: 10px;
+            font-size: 18px;
+        }
+
+        nav {
+            position: absolute;
+            top: 60px;
+            right: 10px;
+            width: 250px;
+            background: rgba(0, 0, 0, 0.9);
+            text-align: left;
+            border-radius: 5px;
+            padding: 10px;
+            display: none;
+            transition: all 0.3s;
+        }
+
+        nav.active {
+            display: block;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            padding: 10px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            display: block;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #95a5a6;
+        }
+
+        /* Styles for the main content section */
+        .content {
+            padding: 100px 20px 40px; /* Add padding */
+            max-width: 800px; /* Maximum width of the content */
+            margin: auto; /* Center the content */
+            flex: 1; /* Allow the content to grow */
+            animation: fadeInUp 1s ease-in-out; /* Fade-in animation */
+            text-align: left;
+        }
+
+        .content h1 {
+            font-size: 36px; /* Set font size for the heading */
+            margin-bottom: 20px; /* Add margin to the bottom */
+        }
+
+        .content p {
+            font-size: 20px; /* Set font size for paragraphs */
+            line-height: 1.6; /* Set line height */
+            text-align: left;
+        }
+
+        /* Styles for various sections within the content */
+        .projects, .marketing-strategy, .case-studies, .gallery {
+            margin-top: 40px; /* Add margin to the top */
+            text-align: center; /* Center-align text */
+            padding: 40px 20px; /* Add padding */
+            animation: fadeInUp 1s ease-in-out; /* Fade-in animation */
+        }
+
+        .projects h2, .marketing-strategy h2, .case-studies h2, .gallery h2 {
+            font-size: 28px; /* Set font size for subheadings */
+            margin-bottom: 15px; /* Add margin to the bottom */
+        }
+
+        /* Styles for the project grid */
+        .project-grid {
+            display: flex; /* Use flexbox for layout */
+            flex-wrap: wrap; /* Wrap the items */
+            justify-content: center; /* Center-align items */
+            gap: 20px; /* Add gap between items */
+        }
+
+        .project-item {
+            background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+            padding: 15px; /* Add padding */
+            border-radius: 5px; /* Rounded corners */
+            width: 250px; /* Set the width */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+            transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover effects */
+        }
+        
+        .project-item:hover {
+            transform: scale(1.05); /* Slightly enlarge the project item */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a deeper shadow */
+        }
+        
+        .project-item img {
+            width: 100%; /* Full width */
+            border-radius: 5px; /* Rounded corners */
+            transition: opacity 0.3s; /* Smooth transition for image hover */
+        }
+        
+        .project-item:hover img {
+            opacity: 0.8; /* Slightly fade the image on hover */
+        }
+        
+        .project-item h3 {
+            margin-top: 10px; /* Add margin above the title */
+            font-size: 20px; /* Set font size */
+            transition: color 0.3s; /* Smooth transition for text hover */
+        }
+        
+        .project-item:hover h3 {
+            color: #3498db; /* Change text color on hover */
+        }
+
+        /* Styles for call-to-action buttons */
+        .cta-button {
+            display: inline-block; /* Inline-block element */
+            margin-top: 10px; /* Add margin to the top */
+            padding: 8px 15px; /* Add padding */
+            background: linear-gradient(45deg, #3498db, #2980b9); /* Gradient background */
+            color: white; /* Set text color to white */
+            text-decoration: none; /* Remove default underline */
+            font-size: 20px; /* Set font size */
+            border-radius: 5px; /* Rounded corners */
+            transition: background 0.3s, transform 0.2s; /* Smooth transition for background and transform */
+        }
+
+        .cta-button:hover {
+            background: #2980b9; /* Change background on hover */
+            transform: scale(1.05); /* Slightly enlarge button on hover */
+        }
+
+        .button2 {
+            display: inline-block; /* Inline-block element */
+            margin-top: 10px; /* Add margin to the top */
+            padding: 8px 15px; /* Add padding */
+            background: linear-gradient(45deg, #3498db, #2980b9); /* Gradient background */
+            color: white; /* Set text color to white */
+            text-decoration: none; /* Remove default underline */
+            font-size: 20px; /* Set font size */
+            border-radius: 5px; /* Rounded corners */
+            transition: background 0.3s, transform 0.2s; /* Smooth transition for background and transform */
+            justify-content: center; /* Center-align content */
+        }
+
+        .button2:hover {
+            background: #2980b9; /* Change background on hover */
+            transform: scale(1.05); /* Slightly enlarge button on hover */
+        }
+
+        /* Styles for the gallery grid */
+        .gallery-grid {
+            display: flex; /* Use flexbox for layout */
+            justify-content: center; /* Center-align items */
+            gap: 15px; /* Add gap between items */
+            flex-wrap: wrap; /* Wrap the items */
+        }
+
+        .gallery-grid img {
+            width: 200px; /* Set the width */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 5px; /* Rounded corners */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+        }
+
+        /* Footer styles */
+        footer {
+            background: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+            padding: 20px; /* Add padding */
+            text-align: center; /* Center-align text */
+            color: white; /* Set text color to white */
+            margin-top: auto; /* Push footer to the bottom */
+        }
+
+        .footer-links a {
+            color: #95a5a6; /* Set link color */
+            text-decoration: none; /* Remove default underline */
+            margin: 0 10px; /* Add margin */
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline; /* Underline on hover */
+        }
+
+        .centered-container {
+            display: flex; /* Use flexbox for layout */
+            justify-content: center; /* Center-align items */
+            align-items: center; /* Align items vertically */
+            min-height: 20vh; /* Minimum height of the container */
+        }
+
+        .container {
+            text-align: left; /* Left-align text */
+            max-width: 600px; /* Maximum width of the container */
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0; /* Start with 0 opacity */
+                transform: translateY(20px); /* Start 20px below */
+            }
+            100% {
+                opacity: 1; /* End with full opacity */
+                transform: translateY(0); /* End at original position */
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Header section containing the logo and navigation menu -->
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="logo.png" alt="Portfolio Logo"></a>
+            <a href="index.html" style="text-decoration:none;color:White">Jacob Winter</a>
+        </div>
+        <div class="hamburger" onclick="toggleMenu()">
+            &#9776; <span>Menu</span>
+        </div>
+        <nav id="nav-menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="marketing.html">Digital Marketing</a></li>
+                <li><a href="design.html">Design / Videography</a></li>
+                <li><a href="communications.html">Communications</a></li>
+                <li><a href="progandux.html">Programming</a></li>
+                <li><a href="userexperience.html">User Experience</a></li>
+                <li><a href="information.html">Resume</a></li>
+                <li><a href="aiusage.html">AI Tools</a></li>
+                <li><a href="contacts.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main content section -->
+<div class="projects">
+    <h2>Programming Projects</h2></h2>
+<para>Bridging functionality and usability, our programming and user experience work focuses on building intuitive, human-centered digital solutions. From front-end development to interactive prototypes, we aim to enhance the user experience through thoughtful design and efficient coding practices.</para>
+    <br>
+    <br>
+    <div class="project-grid">
+        <!-- Individual project item -->
+        <div class="project-item" onclick="window.open('Library/ProgrammingMidterm.html', '_blank')">
+            <img src="Library/ProgrammingCover.png" alt="Fallen Angel Cover">
+            <h3>Website Programming</h3>
+            <p>This project demonstrates my foundational skills in front-end web development, including semantic HTML structure, responsive design, and custom styling with CSS. It reflects my ability to create clean and efficient code for user-friendly websites.</p>
+        </div>
+    </div>
+</div>
+        <!-- Case study section -->
+
+    </section>
+<br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <!-- Footer section with contact links -->
+    <footer>
+        <p>&copy; 2025 Jacob's Portfolio. All rights reserved.</p>
+        <div class="footer-links">
+            <!-- Email link -->
+            <a href="mailto:jfw001@lvc.edu"><i class="fas fa-envelope"></i> Email</a>
+            <!-- LinkedIn profile link -->
+            <a href="https://www.linkedin.com/in/jacob-winter-52a160263/"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            <!-- Facebook profile link -->
+            <a href="https://www.facebook.com/jacob.winter.33671"><i class="fab fa-facebook"></i> Facebook</a>
+        </div>
+    </footer>
+</body>
+</html>
+</body>
+</html>
