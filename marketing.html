@@ -177,11 +177,32 @@
             border-radius: 5px; /* Rounded corners */
             width: 250px; /* Set the width */
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+            transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover effects */
         }
-
+        
+        .project-item:hover {
+            transform: scale(1.05); /* Slightly enlarge the project item */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a deeper shadow */
+        }
+        
         .project-item img {
             width: 100%; /* Full width */
             border-radius: 5px; /* Rounded corners */
+            transition: opacity 0.3s; /* Smooth transition for image hover */
+        }
+        
+        .project-item:hover img {
+            opacity: 0.8; /* Slightly fade the image on hover */
+        }
+        
+        .project-item h3 {
+            margin-top: 10px; /* Add margin above the title */
+            font-size: 20px; /* Set font size */
+            transition: color 0.3s; /* Smooth transition for text hover */
+        }
+        
+        .project-item:hover h3 {
+            color: #3498db; /* Change text color on hover */
         }
 
         /* Styles for call-to-action buttons */
